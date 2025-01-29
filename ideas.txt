@@ -2,3 +2,6 @@ canvas redesign
 Parking app
 I'm stealing that guys noise app idea, we can make it but better, with blackjack and- *gets pulled off stage with comically large hook*
 Gym app that tracks the activity in the gym and allows users to easily locate machines and compete with their friends
+Spending Tracking:
+    User enters anything they bought onto the app, it adds this to the day's sum.
+    THe user inputs the max amount they would like to spend in a day, which is compared to their total
