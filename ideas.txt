@@ -6,3 +6,5 @@ Gym app that tracks the activity in the gym and allows users to easily locate ma
 Spending Tracking:
     User enters anything they bought onto the app, it adds this to the day's sum.
     THe user inputs the max amount they would like to spend in a day, which is compared to their total
+Geoguessing app:
+    to help new students learn about the campis and older students to have fun.
