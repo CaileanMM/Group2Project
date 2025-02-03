@@ -8,3 +8,6 @@ Spending Tracking:
     The user inputs the max amount they would like to spend in a day, which is compared to their total
 Geoguessing app:
     to help new students learn about the campis and older students to have fun.
+
+Auto sorted career path app:
+    Student can use this app to have some sort of algorithm automatically sorted their courses depending on their major and current semester, student can make their own career path without meeting with advisor which is time consuming and also the lack of availbility.
