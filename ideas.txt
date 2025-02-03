@@ -10,4 +10,10 @@ Geoguessing app:
     to help new students learn about the campis and older students to have fun.
 
 Auto sorted career path app:
-    Student can use this app to have some sort of algorithm automatically sorted their courses depending on their major and current semester, student can make their own career path without meeting with advisor which is time consuming and also the lack of availbility.
+    Student can use this app to have some sort of algorithm automatically sorted their courses depending on their major and current semester, student can make their own career path without meeting with advisor which is time consuming and also the lack of availability.
+
+Actually Working Ideas, No BS
+Geoguessing App
+Career Path App
+Task Prioritize App
+24/7 Tutor System
