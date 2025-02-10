@@ -1,0 +1,30 @@
+﻿Product Vision: To help students who procrastinate until 9pm and it is due at 11:59pm.
+ICE 4-2: Design Sprint Day 1, "Monday" Personas, Journey Maps
+Stakeholders: TA, teachers
+Personas:
+Name: Marcus
+About me: 
+I am Marcus, a 19 year old, in computer science major. I was born in a city and always grew up around technology. I joined UNCC two years ago.   I am hoping to land a job at google. I am struggling in classes. I spend too much time doing other things. I am passionate about tech.
+
+
+Pain points: There is no help after 5pm at night and I need help immediately.
+Goals: To pass my classes.
+
+
+
+
+Journey map:
+
+
+Decide:
+User needs help on HW
+Class TA’s don’t have help at night
+Interact:
+Log on 
+Find highest rated
+Find Teacher:
+Click on teacher
+Either go to zoom
+Or chat
+Help:
+Get explanation
