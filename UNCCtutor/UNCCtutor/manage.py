@@ -20,3 +20,10 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+#"cd UNCCtutor\UNCCtutor
+#Set-ExecutionPolicy RemoteSigned –Scope Process
+#env\scripts\activate
+#python manage.py runserver"
