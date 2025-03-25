@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
 
 
-#"cd UNCCtutor\UNCCtutor
+#cd UNCCtutor\UNCCtutor
 #Set-ExecutionPolicy RemoteSigned –Scope Process
 #env\scripts\activate
-#python manage.py runserver"
+#python manage.py runserver

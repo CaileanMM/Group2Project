@@ -16,7 +16,23 @@ Including another URLconf
 """
 # from django.contrib import admin
 from django.urls import path
+from django.contrib import admin
+from django.http import HttpResponse
+from django.shortcuts import render
+
+
+
+
+def home(request):
+    return HttpResponse('Home page') 
+
+# path to login page
+def login(request):
+    return render(request, 'login.html')
+
 
 urlpatterns = [
     #    path('admin/', admin.site.urls),
+    path('', home),
+    path('login/', login),
 ]
