@@ -19,6 +19,7 @@ from django.urls import path
 from django.contrib import admin
 from django.http import HttpResponse
 from django.shortcuts import render
+from . import views
 
 
 
@@ -34,5 +35,5 @@ def login(request):
 urlpatterns = [
     #    path('admin/', admin.site.urls),
     path('', home),
-    path('login/', login),
+    path('login/', views.loginPage, name="login"),
 ]
