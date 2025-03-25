@@ -1,0 +1,9 @@
+.profile-container{
+    display: flex;
+    font-family: "Roboto";
+    justify-content: space-around;
+}
+
+.user-left-container{
+    background: #2b542c;
+}
