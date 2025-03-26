@@ -14,6 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import profile
+
 # from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
@@ -30,9 +32,13 @@ def home(request):
 def login(request):
     return render(request, 'login.html')
 
+def userProfile(request):
+    return render(request, 'user-profile.html')
+
 
 urlpatterns = [
     #    path('admin/', admin.site.urls),
     path('', home),
     path('login/', login),
+    path('userProfile/', userProfile),
 ]
