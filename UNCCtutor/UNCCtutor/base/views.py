@@ -12,7 +12,7 @@ def loginPage(request):
         password = request.POSt.get('password')
 
         try:
-            user =User.objects.get(email=email)
+            user = User.objects.get(email=email)
         except:
             messages.error(request, 'incorrect uncc email')
     
