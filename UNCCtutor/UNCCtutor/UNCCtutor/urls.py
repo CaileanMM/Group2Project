@@ -38,6 +38,9 @@ def register(request):
 def userProfile(request):
     return render(request, 'user-profile.html')
 
+def tutorFinder(request):
+    return render(request, 'tutor-finder.html')
+
 
 urlpatterns = [
     #    path('admin/', admin.site.urls),
@@ -46,4 +49,5 @@ urlpatterns = [
     path('login-register/', register),
     path('userProfile/', userProfile),
     
+    path('tutorFinder/', tutorFinder),
 ]
