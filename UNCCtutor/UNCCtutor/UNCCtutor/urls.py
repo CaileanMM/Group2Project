@@ -32,7 +32,7 @@ def home(request):
 def login(request):
     return render(request, 'login.html')
 
-def login(request):
+def register(request):
     return render(request, 'login-register.html')
 
 def userProfile(request):
@@ -43,7 +43,7 @@ urlpatterns = [
     #    path('admin/', admin.site.urls),
     path('', home),
     path('login/', login),
-    path('login-register/'),
+    path('login-register/', register),
     path('userProfile/', userProfile),
     
 ]

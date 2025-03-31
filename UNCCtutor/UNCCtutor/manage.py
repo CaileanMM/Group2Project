@@ -25,5 +25,5 @@ if __name__ == '__main__':
 
 #cd UNCCtutor\UNCCtutor
 #Set-ExecutionPolicy RemoteSigned –Scope Process
-#source env\scripts\activate
+#env\scripts\activate
 #python manage.py runserver
