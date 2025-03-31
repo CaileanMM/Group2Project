@@ -43,7 +43,7 @@ urlpatterns = [
     #    path('admin/', admin.site.urls),
     path('', home),
     path('login/', login),
-    path('login-register/')
+    path('login-register/'),
     path('userProfile/', userProfile),
     
 ]
