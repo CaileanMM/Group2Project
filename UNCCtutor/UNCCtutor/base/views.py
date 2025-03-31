@@ -34,4 +34,4 @@ def RegisterPage(request):
             messages.error(request, 'incorrect uncc email')
     
     context = {}
-    return render(request, 'base/login-register.html', context)
+    return render(request, 'base/register.html', context)
