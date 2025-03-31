@@ -44,9 +44,10 @@ def tutorFinder(request):
 
 urlpatterns = [
     #    path('admin/', admin.site.urls),
+    
     path('', home),
     path('login/', login),
-    path('login-register/', register),
+    path('register/', register),
     path('userProfile/', userProfile),
     
     path('tutorFinder/', tutorFinder),
