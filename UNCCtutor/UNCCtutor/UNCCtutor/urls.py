@@ -32,6 +32,9 @@ def home(request):
 def login(request):
     return render(request, 'login.html')
 
+def login(request):
+    return render(request, 'login-register.html')
+
 def userProfile(request):
     return render(request, 'user-profile.html')
 
@@ -40,5 +43,7 @@ urlpatterns = [
     #    path('admin/', admin.site.urls),
     path('', home),
     path('login/', login),
+    path('login-register/')
     path('userProfile/', userProfile),
+    
 ]
