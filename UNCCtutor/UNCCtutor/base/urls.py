@@ -21,37 +21,22 @@ from django.urls import path
 from django.contrib import admin
 from django.http import HttpResponse
 from django.shortcuts import render
+from . import views
 
 
 def home(request):
     return HttpResponse('Home page')
 
 
-# path to login page
-def login(request):
-    return render(request, 'login.html')
-
-
-def register(request):
-    return render(request, 'login-register.html')
-
-
-def userProfile(request):
-    return render(request, 'user-profile.html')
-
-
-def tutorFinder(request):
-    return render(request, 'tutor-finder.html')
-
 
 urlpatterns = [
-    #    path('admin/', admin.site.urls),
+       # path('admin/', admin.site.urls),
 
     path('', home),
-    path('login/', login),
-    path('register/', register),
-    path('userProfile/', userProfile),
+    path('login/', views.loginPage, name="login"),
+    path('register/', views.RegisterPage, name='register'),
+    path('profile/', views.userProfile, name='user-profile'),
 
-    path('tutorFinder/', tutorFinder),
+    path('tutorFinder/', views.tutorFinder, name='tutorFinder'),
 ]
 

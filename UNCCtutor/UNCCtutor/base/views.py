@@ -9,7 +9,7 @@ def loginPage(request):
 
     if request.method == 'POST':
         email = request.POST.get('email')
-        password = request.POSt.get('password')
+        password = request.POST.get('password')
 
         try:
             user = User.objects.get(email=email)
@@ -26,7 +26,7 @@ def RegisterPage(request):
 
     if request.method == 'POST':
         email = request.POST.get('email')
-        password = request.POSt.get('password')
+        password = request.POST.get('password')
 
         try:
             user = User.objects.get(email=email)
@@ -35,3 +35,11 @@ def RegisterPage(request):
     
     context = {}
     return render(request, 'base/register.html', context)
+
+def userProfile(request):
+    context = {}
+    return render(request, 'base/user-profile.html', context)
+
+def tutorFinder(request):
+    context = {}
+    return render(request, 'base/tutor-finder.html', context)
