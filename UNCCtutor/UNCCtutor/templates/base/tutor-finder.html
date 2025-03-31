@@ -1,15 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tutor Finder</title>
+        <style>
+            body {
+                background-image: url("/static/images/UNCC_Background.jpeg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .tutor_finder-Body {
+                background-color: white;
+                display: inline-grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .tutor_finder-Feature {
+                display: inline-grid;
+                grid-template-columns: 1fr;
+            }
+            .tutor_finder-Details {
+                display: inline-grid;
+                grid-template-columns: 1fr;
+            }
+            .tutor_finder-Button input {
+                background-color: green; 
+                color: white;
+                display: inline-grid;
+                grid-template-columns: 1fr 1fr;
+            }
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>StudyBud</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-</head>
+        </style>
+    </head>
 
-<body>
-    
-</body>
+    <body>
 
+    <div>
+
+        <h1 style="color: white">Tutor Finder</h1>
+
+        <div class="tutor_finder-Body">
+            <div class = "tutor_finder-Feature">
+                <h3>Select a Course</h3>
+
+                <div class = "tutor_finder-Button">
+                    <input type="submit" value="Instant Mode" />
+                    <input type="submit" value="Choose a Tutor" />
+                </div>
+
+            </div>
+
+            <div class = "tutor_finder-Details">
+                <p>(Tutor Finder info goes here)</p>
+            </div>
+        </div>
+
+    </div>
+        
+    </body>
 </html>
