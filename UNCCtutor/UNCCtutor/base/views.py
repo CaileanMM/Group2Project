@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
-    return render('Home page')
+    return render(request, 'base/landing.html')
 
 def loginPage(request):
 
@@ -40,7 +40,7 @@ def RegisterPage(request):
 
 def userProfile(request):
     context = {}
-    return render(request, 'base/templates/base/user-profile.html', context)
+    return render(request, 'base/profile.html', context)
 
 def tutorFinder(request):
     context = {}

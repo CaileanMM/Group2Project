@@ -1,5 +1,4 @@
 
-{% include static %}
 
 
 <!--<style>-->
@@ -58,7 +57,9 @@
 
 
 <!--</style>-->
-<link rel="stylesheet" href="{% static 'style.css' %}" />
+
+{% extends 'main.html' %}
+{% block content %}
 
 <div class="profile-container">
     <div class="user-left-container">
@@ -85,3 +86,4 @@
         </div>
     </div>
 </div>
+{% endblock %}

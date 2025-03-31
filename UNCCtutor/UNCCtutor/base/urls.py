@@ -24,12 +24,10 @@ from . import views
 
 urlpatterns = [
        # path('admin/', admin.site.urls),
-
-    path('', views.home),
+    path('', views.home, name='home'),
     path('login/', views.loginPage, name="login"),
     path('register/', views.RegisterPage, name='register'),
-    path('user-profile/', views.userProfile, name='user-profile'),
-
+    path('profile/', views.userProfile, name='user-profile'),
     path('tutorFinder/', views.tutorFinder, name='tutorFinder'),
 ]
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% include static %}
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -9,9 +9,17 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
+
+  {% include 'navbar.html' %}
+
   <div class="user-left-column">
       <div class="info-text">Hello</div>
   </div>
+
+  {% block content %}
+
+  {% endblock %}
+
 <!--    <script src="index.js"></script>-->
 
   </body>
