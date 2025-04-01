@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.db.models import Q
-from django.contrib.auth.models import User
+from django.contrib import messages
+
+
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User 
 
 
 # Create your views here.
@@ -14,31 +18,43 @@ def loginPage(request):
     #    return redirect('')
 
     if request.method == 'POST':
-        email = request.POST.get('email')
+        email = request.POST.get('email').lower()
         password = request.POST.get('password')
 
         try:
             user = User.objects.get(email=email)
         except:
             messages.error(request, 'incorrect uncc email')
+        
+        user = authenticate(request, email=email, password=password)
+
+        if user is not None:
+            login(request, user)
+            #  return redirect()
+        else:
+            messages.error(request, 'Email OR password does not exist')
     
     context = {}
     return render(request, 'base/login.html', context)
 
 
-def RegisterPage(request):
+def registerPage(request):
+
+    form = MyUserCreationForm()
 
     if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
+        form = MyUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            login(request, user)
+            # return redirect('home')
+        else:
+            messages.error(request, "An error occured dufring registeration")
 
-        try:
-            user = User.objects.get(email=email)
-        except:
-            messages.error(request, 'incorrect uncc email')
 
-    context = {}
-    return render(request, 'base/register.html', context)
+    return render(request, 'login.html', {'form':form})
 
 
 def userProfile(request):
