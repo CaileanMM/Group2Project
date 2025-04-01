@@ -26,8 +26,6 @@ def loginPage(request):
     return render(request, 'base/login.html', context)
 
 
-
-
 def RegisterPage(request):
 
     if request.method == 'POST':
@@ -39,14 +37,14 @@ def RegisterPage(request):
         except:
             messages.error(request, 'incorrect uncc email')
 
-
-    
     context = {}
     return render(request, 'base/register.html', context)
+
 
 def userProfile(request):
     context = {}
     return render(request, 'base/profile.html', context)
+
 
 def tutorFinder(request):
     context = {}
