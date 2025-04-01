@@ -80,7 +80,7 @@
     width: 650px;
     height: 150px;
     font: 20px "roboto", sans-serif;
-    margin-top: 5px;
+    margin-top: 20px;
     color: white;
     border: 2px white;
     background: #005035;
@@ -90,7 +90,7 @@
 }
 
 .info-container#classes{
-    height: 600px;
+    height: 490px;
     width: 400px;
     justify-content: normal;
 }

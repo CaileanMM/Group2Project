@@ -29,6 +29,7 @@ urlpatterns = [
     path('register/', views.RegisterPage, name='register'),
     path('profile/', views.userProfile, name='user-profile'),
     path('edit-profile/', views.editProfile, name='edit-profile'),
+    path('edit-classes/', views.editClasses, name='edit-classes'),
     path('tutor-finder/', views.tutorFinder, name='tutor-finder'),
 ]
 

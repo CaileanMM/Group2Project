@@ -49,6 +49,10 @@ def editProfile(request):
     context = {}
     return render(request, 'base/edit-profile.html', context)
 
+def editClasses(request):
+    context = {}
+    return render(request, 'base/edit-classes.html', context)
+
 
 def tutorFinder(request):
     context = {}
