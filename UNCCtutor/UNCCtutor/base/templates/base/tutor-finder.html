@@ -6,30 +6,7 @@
         <meta charset="UTF-8">
         <title>Tutor Finder</title>
         <style>
-            body {
-                background-image: url("/static/images/UNCC_Background.jpeg");
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .tutor_finder-Body {
-                background-color: white;
-                display: inline-grid;
-                grid-template-columns: 1fr 1fr;
-            }
-            .tutor_finder-Feature {
-                display: inline-grid;
-                grid-template-columns: 1fr;
-            }
-            .tutor_finder-Details {
-                display: inline-grid;
-                grid-template-columns: 1fr;
-            }
-            .tutor_finder-Button input {
-                background-color: green; 
-                color: white;
-                display: inline-grid;
-                grid-template-columns: 1fr 1fr;
-            }
+
 
         </style>
     </head>
@@ -38,21 +15,32 @@
 
     <div>
 
-        <h1 style="color: white">Tutor Finder</h1>
+
 
         <div class="tutor_finder-Body">
             <div class = "tutor_finder-Feature">
-                <h3>Select a Course</h3>
 
-                <div class = "tutor_finder-Button">
-                    <input type="submit" value="Instant Mode" />
-                    <input type="submit" value="Choose a Tutor" />
+                <div class="tutor_finder-title">Tutor Finder</div>
+
+                <div class="tutor_finder-container">
+
+                    <div class="tutor_finder-course">
+                        <div id="select-course">Select a Course</div>
+
+                            <input id="input-course" type="text" placeholder="Enter A Course Number..."/>
+
+                        <div class = "tutor_finder-Button">
+                            <input type="submit" value="Instant Mode" />
+                            <input type="submit" value="Choose a Tutor" />
+                        </div>
+                    </div>
+
+
+                    <div class = "tutor_finder-Details">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed augue eu ligula dictum pellentesque a eget purus. Ut ut condimentum turpis. Proin tincidunt, libero sed fringilla tristique, magna turpis fermentum risus, eu pharetra turpis enim ut est. Vivamus imperdiet tellus id elit aliquam mollis. Integer mattis mattis dui. Mauris pulvinar tempus ipsum in faucibus. Quisque in porta diam. Suspendisse posuere sem sit amet arcu gravida, a euismod turpis vehicula. Nam risus massa, efficitur nec fermentum in, luctus ac mauris. Praesent id dictum libero. Nam placerat tortor felis
+</div>
+                    </div>
                 </div>
-
-            </div>
-
-            <div class = "tutor_finder-Details">
-                <p>(Tutor Finder info goes here)</p>
             </div>
         </div>
 
