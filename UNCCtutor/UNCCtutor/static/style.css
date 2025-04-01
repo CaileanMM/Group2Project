@@ -6,6 +6,7 @@
 
 .html{margin: 0; padding: 0;}
 
+/*Navbar Page*/
 .bar{
     margin: 0px 0px 0px 0px;
     height: 100px;
@@ -38,6 +39,7 @@
     text-decoration: none;
 }
 
+/*Profile Page*/
 .profile-container{
     margin-top: 20px;
     display: flex;
@@ -115,6 +117,7 @@
     font: 20px "roboto", sans-serif;
 }
 
+/*Login Page*/
 .sign-up-button{
     color: white;
     font: 18px "roboto", sans-serif;
@@ -146,4 +149,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*Tutor Finder Page*/
+body {
+    background-image: url("../static/images/UNCC_Background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tutor_finder-Body {
+    background-color: white;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+}
+.tutor_finder-Feature {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+}
+.tutor_finder-Details {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+}
+.tutor_finder-Button input {
+    background-color: green;
+    color: white;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
 }
