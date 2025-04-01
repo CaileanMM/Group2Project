@@ -1,10 +1,12 @@
 {% load static %}
 
 
-<html>
+<div class="bar">
     <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <div class="bar">
-        <a class="navbar-pic" href="{% url 'user-profile' %}"> <img src="{% static 'images/profile-pic-placeholder.png' %}" /> </a>
-        <button href=""></button>
+    <div class="bar-right">
+
+        <a class="navbar-text" href="{% url 'home' %}">Home</a>
+        <a class="navbar-text" href="{% url 'tutor-finder' %}">Find a Tutor</a>
+        <a class="navbar-pic" href="{% url 'user-profile' %}"><img src="{% static 'images/profile-pic-placeholder.png' %}"/></a>
     </div>
-</html>
+</div>

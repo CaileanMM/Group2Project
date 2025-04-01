@@ -28,6 +28,6 @@ urlpatterns = [
     path('login/', views.loginPage, name="login"),
     path('register/', views.RegisterPage, name='register'),
     path('profile/', views.userProfile, name='user-profile'),
-    path('tutorFinder/', views.tutorFinder, name='tutorFinder'),
+    path('tutorFinder/', views.tutorFinder, name='tutor-finder'),
 ]
 
