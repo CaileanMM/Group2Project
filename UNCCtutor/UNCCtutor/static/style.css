@@ -17,7 +17,7 @@
 }
 
 .bar-right{
-    width: 500px;
+    width: 800px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,7 +29,6 @@
 }
 
 .navbar-text{
-
     font: 30px "roboto", sans-serif;
     color: white;
     text-decoration: none;
