@@ -9,6 +9,10 @@ def home(request):
 
 def loginPage(request):
 
+    page = 'login'
+    #if(request.user.is_authenticated)
+    #    return redirect('')
+
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
@@ -34,6 +38,8 @@ def RegisterPage(request):
             user = User.objects.get(email=email)
         except:
             messages.error(request, 'incorrect uncc email')
+
+
     
     context = {}
     return render(request, 'base/register.html', context)

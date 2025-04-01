@@ -5,16 +5,21 @@
 
     <form method="POST" action="">
         {%csrf_token%}
-        <label>Email:</label>
-        <input type="email" name="email" placeholder = "Enter UNCC email..." />
-        <label>Password:</label>
-        <input type="password" name="password" placeholder = "Enter Password..." />
+        <div class="info-container">
+            <label>Email:</label>
+            <input type="email" name="email" placeholder = "Enter UNCC email..." />
+        </div>
 
-        <input type="submit" value="Login" />
-    </form>
-
-    <p>have not signed up yet?</p>
-    <a href='{% url "register" %}'>Sign up</a>
+        <div class="info-container">
+            <label>Password</label>
+            <input type="password" name="password" placeholder = "Enter Password..." />
+            <input type="submit" value="Login" />
+        </div>
+  </form>
+       
+        <label>have not signed up yet?</label>
+        <a href='{% url "register" %}'>Sign up</a>
+       
 
 </div>
 {% endblock %}
