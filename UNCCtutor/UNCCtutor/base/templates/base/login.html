@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 {% block content %}
 
-<div>
+<div class="login-container">
 
     <form method="POST" action="">
         {%csrf_token%}
@@ -11,14 +11,15 @@
         </div>
 
         <div class="info-container">
-            <label>Password</label>
+            <label>Password:</label>
             <input type="password" name="password" placeholder = "Enter Password..." />
             <input type="submit" value="Login" />
         </div>
   </form>
-       
-        <label>have not signed up yet?</label>
-        <a href='{% url "register" %}'>Sign up</a>
+    <div class="not-signed-container">
+        <label class="info-text">Not signed up yet?</label>
+        <a class="sign-up-button" href='{% url "register" %}'>Sign up</a>
+    </div>
        
 
 </div>

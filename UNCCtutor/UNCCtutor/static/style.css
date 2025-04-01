@@ -66,11 +66,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 .edit-button:hover{
-    background-color: #003826;
+    background-color: #00462f;
 }
 
 .info-container{
@@ -111,4 +112,38 @@
 .info-text{
     margin-top: 10px;
     text-align: center;
+    font: 20px "roboto", sans-serif;
+}
+
+.sign-up-button{
+    color: white;
+    font: 18px "roboto", sans-serif;
+    text-decoration: none;
+    height: 40px;
+    width: 80px;
+    background-color: #3151f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius:10px;
+}
+
+.sign-up-button:hover{
+    background-color: #1e41ff;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.not-signed-container{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
