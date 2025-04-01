@@ -1,10 +1,12 @@
 {% load static %}
 
-
+<link rel="stylesheet" href="{% static 'style.css' %}" />
 <div class="bar">
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <div class="bar-right">
+    <div class="bar-left">
+        <a href="https://my.charlotte.edu/student" class="navbar-pic"><img src="{% static 'images/uncc-logo.png' %}"/></a>
+    </div>
 
+    <div class="bar-right">
         <a class="navbar-text" href="{% url 'home' %}">Home</a>
         <a class="navbar-text" href="{% url 'tutor-finder' %}">Find a Tutor</a>
         <a href="" class="navbar-text">Support</a>
