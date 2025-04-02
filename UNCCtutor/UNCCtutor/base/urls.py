@@ -23,7 +23,7 @@ from django.shortcuts import render
 from . import views
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+       # path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('login/', views.loginPage, name="login"),
     path('register/', views.registerPage, name='register'),
@@ -31,7 +31,6 @@ urlpatterns = [
     path('edit-profile/', views.editProfile, name='edit-profile'),
     path('edit-classes/', views.editClasses, name='edit-classes'),
     path('tutor-finder/', views.tutorFinder, name='tutor-finder'),
-    path('tutor-profile/', views.tutorProfile, name='tutor-profile'),
-    path('support/', views.support, name='support'),
+    path('zoom-page/', views.zoomPage, name='zoom-page'),
 ]
 

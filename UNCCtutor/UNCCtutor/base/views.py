@@ -6,9 +6,6 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User 
 
-from .models import User
-from .forms import MyUserCreationForm
-
 
 # Create your views here.
 def home(request):
@@ -52,12 +49,12 @@ def registerPage(request):
             user.username = user.username.lower()
             user.save()
             login(request, user)
-            return redirect('home')
+            # return redirect('home')
         else:
             messages.error(request, "An error occured dufring registeration")
 
 
-    return render(request, 'base/register.html', {'form':form})
+    return render(request, 'login.html', {'form':form})
 
 
 def userProfile(request):
@@ -77,10 +74,6 @@ def tutorFinder(request):
     context = {}
     return render(request, 'base/tutor-finder.html', context)
 
-def tutorProfile(request):
+def zoomPage(request):
     context = {}
-    return render(request, 'base/tutor-profile.html', context)
-
-def support(request):
-    context = {}
-    return render(request, 'base/support.html' , context)
+    return render(request, 'base/zoom-page.html', context)
