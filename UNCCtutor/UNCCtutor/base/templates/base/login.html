@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% block content %}
 
+<body id="landing_background">
 <div class="login-container">
 
     <form method="POST" action="">
@@ -18,11 +19,14 @@
         </div>
   </form>
 </div>
+<div class="info-container">
     <div class="not-signed-container">
         <label class="info-text">Not signed up yet?</label>
         <a class="sign-up-button" href='{% url "register" %}'>Sign up</a>
     </div>
+</div>
 
 
 </div>
+</body>
 {% endblock %}
