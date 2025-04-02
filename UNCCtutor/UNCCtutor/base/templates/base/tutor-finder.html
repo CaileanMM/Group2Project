@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% extends 'main.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}" />
 {% block content %}
 <html lang="en">
     <head>
@@ -11,14 +13,11 @@
         </style>
     </head>
 
-    <body>
+    <body class="tutor-finder">
 
     <div>
-
-
-
         <div class="tutor_finder-Body">
-            <div class = "tutor_finder-Feature">
+            <div class="tutor_finder-Feature">
 
                 <div class="tutor_finder-title">Tutor Finder</div>
 
@@ -45,7 +44,7 @@
         </div>
 
     </div>
-        
+
     </body>
 </html>
 

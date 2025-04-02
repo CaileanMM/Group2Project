@@ -152,7 +152,7 @@
 }
 
 /*Tutor Finder Page*/
-body {
+.tutor-finder {
     background-image: url("../static/images/UNCC_Background.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
