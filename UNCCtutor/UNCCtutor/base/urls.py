@@ -27,6 +27,7 @@ urlpatterns = [
        # path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('login/', views.loginPage, name="login"),
+    path('logout/', views.logoutUser, name="logout"),
     path('register/', views.registerPage, name='register'),
     path('profile/<str:pk>', views.userProfile, name="user-profile"),
     path('edit-profile/', views.editProfile, name='edit-profile'),

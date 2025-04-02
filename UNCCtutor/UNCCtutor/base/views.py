@@ -63,6 +63,10 @@ def userProfile(request, pk):
     context = {'user': user}
     return render(request, 'base/profile.html', context)
 
+def logoutUser(request):
+    logout(request)
+    return redirect('home')
+
 def editProfile(request):
     context = {}
     return render(request, 'base/edit-profile.html', context)
