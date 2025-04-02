@@ -202,3 +202,38 @@
     padding: 10vh;
     line-height: 3vh;
 }
+
+
+/*Landing page*/
+
+#landing_background{
+    background-image: url("../static/images/uncc_stock_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#landing_main_body{
+    max-width: 350px;
+    background-color: white;
+    padding: 30px;
+    margin: 30px;
+}
+
+.landing_flex{
+    display: flexbox;
+    padding: 20px;
+    max-width: 300px;
+}
+
+#landing_footer{
+    background-color: #00462f;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
