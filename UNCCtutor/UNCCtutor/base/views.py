@@ -77,3 +77,7 @@ def tutorFinder(request):
 def zoomPage(request):
     context = {}
     return render(request, 'base/zoom-page.html', context)
+
+def support(request):
+    context = {}
+    return render(request, 'base/support.html', context)
