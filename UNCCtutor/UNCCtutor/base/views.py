@@ -4,7 +4,7 @@ from django.contrib import messages
 
 
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
+from .models import User
 from .forms import MyUserCreationForm
 
 
@@ -58,8 +58,9 @@ def registerPage(request):
     return render(request, 'base/register.html', {'form':form})
 
 
-def userProfile(request):
-    context = {}
+def userProfile(request, pk):
+    user = User.objects.get(id=pk)
+    context = {'user': user}
     return render(request, 'base/profile.html', context)
 
 def editProfile(request):
