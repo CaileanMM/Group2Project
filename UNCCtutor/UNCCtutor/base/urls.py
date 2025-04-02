@@ -31,5 +31,6 @@ urlpatterns = [
     path('edit-profile/', views.editProfile, name='edit-profile'),
     path('edit-classes/', views.editClasses, name='edit-classes'),
     path('tutor-finder/', views.tutorFinder, name='tutor-finder'),
+    path('zoom-page/', views.zoomPage, name='zoom-page'),
 ]
 

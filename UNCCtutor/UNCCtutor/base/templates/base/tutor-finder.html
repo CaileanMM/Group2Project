@@ -1,36 +1,28 @@
-<!DOCTYPE html>
 {% extends 'main.html' %}
+
 {% block content %}
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Tutor Finder</title>
-    </head>
+<body class="tutor-finder">
 
-    <body class="tutor-finder">
+    <p style="color: white; font-size: 4vw; margin: 2%; text-shadow: 2px 2px 5px black;">Tutor Finder</p>
 
-        <p style="color: white; font-size: 4vw; margin: 2%; text-shadow: 2px 2px 5px black;">Tutor Finder</p>
+    <div class="tutor_finder-Body">
 
-        <div class="tutor_finder-Body">
+        <div class = "tutor_finder-Feature">
+            <h2>Select a Course</h2>
 
-            <div class = "tutor_finder-Feature">
-                <h2>Select a Course</h2>
-
-                <textarea name="" id="" placeholder="Describe what you need..."></textarea>
-                <div class = "tutor_finder-Button">
-                    <input type="submit" value="Instant Mode" />
-                    <input type="submit" value="Choose a Tutor" />
-                </div>
-
-            </div>
-
-            <div class = "tutor_finder-Details">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+            <textarea name="" id="" placeholder="Describe what you need..."></textarea>
+            <div class = "tutor_finder-Button">
+                <a href = "{% url 'zoom-page' %}" type="submit"><input type="submit" value="Instant Mode" /></a>
+                <a href = "" type="submit"><input type="submit" value="Choose a Tutor" /></a>
             </div>
 
         </div>
-        
-    </body>
-</html>
 
+        <div class = "tutor_finder-Details">
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+        </div>
+
+    </div>
+    
+</body>
 {% endblock %}

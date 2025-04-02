@@ -73,3 +73,7 @@ def editClasses(request):
 def tutorFinder(request):
     context = {}
     return render(request, 'base/tutor-finder.html', context)
+
+def zoomPage(request):
+    context = {}
+    return render(request, 'base/zoom-page.html', context)
