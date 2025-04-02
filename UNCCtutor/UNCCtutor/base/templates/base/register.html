@@ -1,20 +1,30 @@
 {% extends 'main.html' %}
 {% block content %}
-<div>
+<body id="landing_background">
+<div class="login-container">
 
     <form method="POST" action="">
         {%csrf_token%}
+        <div class="info-container">
         <div class="info-container">
             <label>Email:</label>
             <input type="email" name="email" placeholder = "Enter UNCC email..." />
         </div>
 
         <div class="info-container">
-            <label>Password</label>
+            <label>Password:</label>
             <input type="password" name="password" placeholder = "Enter Password..." />
-            <input type="submit" value="Login" />
+            <input type="submit" value="Sign Up" />
         </div>
   </form>
-  
 </div>
+<div class="info-container">
+<div class="not-signed-container">
+    <label class="info-text">Already Signed Up?</label>
+    <a class="sign-up-button" href='{% url "login" %}'>Login</a>
+</div>
+</div>
+</div>
+
+</body>
 {% endblock %}
