@@ -207,6 +207,7 @@
 }
 
 .tutor_finder-Feature > textarea {
+    font-family: sans-serif;
     resize: none;
     padding: 10px;
     height: 20vh;
@@ -215,7 +216,7 @@
 }
 
 .tutor_finder-Button > a > input {
-    background-image: linear-gradient(to bottom right, #006b47, #005035);
+    background-image: linear-gradient(180deg, #006b47, #005035);
     border-radius: 10px;
     border-style: none;
     color: white;
@@ -234,7 +235,7 @@
 
 /*Zoom page*/
 .zoom-page {
-    background-image: url("../static/images/UNCC_Background.jpeg");
+    background-image: url("../static/images/AtkinsLibrary.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -248,9 +249,20 @@
     min-height: 50vh;
     padding: 20px;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
     box-shadow: 0px 10px 15px black;
+    display: grid; 
+    place-items: center;
+}
+
+.zoom-page-Body > a > input {
+    background-image: linear-gradient(180deg, #006b47, #005035);
+    font-size: 5vh;
+    border-radius: 10000px;
+    border-style: none;
+    color: white;
+    height: 15vh;
+    width: 80vh;
+    cursor: pointer;
 }
 
 
