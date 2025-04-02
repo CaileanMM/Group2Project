@@ -22,6 +22,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from . import views
 
+
 urlpatterns = [
        # path('admin/', admin.site.urls),
     path('', views.home, name='home'),
@@ -33,5 +34,6 @@ urlpatterns = [
     path('tutor-finder/', views.tutorFinder, name='tutor-finder'),
     path('zoom-page/', views.zoomPage, name='zoom-page'),
     path('support/', views.support, name='support'),
+    path('tutor-profile/', views.tutorProfile, name='tutor-profile'),
 ]
 
