@@ -4,7 +4,8 @@ from django.contrib import messages
 
 
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
+from .forms import MyUserCreationForm
 
 
 # Create your views here.
@@ -54,7 +55,7 @@ def registerPage(request):
             messages.error(request, "An error occured dufring registeration")
 
 
-    return render(request, 'login.html', {'form':form})
+    return render(request, 'base/register.html', {'form':form})
 
 
 def userProfile(request):
@@ -81,3 +82,7 @@ def zoomPage(request):
 def support(request):
     context = {}
     return render(request, 'base/support.html', context)
+
+def tutorProfile(request):
+    context = {}
+    return render(request, 'base/tutor-profile.html', context)

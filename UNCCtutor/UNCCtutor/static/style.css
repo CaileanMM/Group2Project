@@ -160,6 +160,11 @@
     border-radius:10px;
 }
 
+.sign-up-button#tutor-profile-button{
+    height: 40px;
+    width: 120px;
+}
+
 .sign-up-button:hover{
     background-color: #1e41ff;
 }
