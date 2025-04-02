@@ -31,5 +31,7 @@ urlpatterns = [
     path('edit-profile/', views.editProfile, name='edit-profile'),
     path('edit-classes/', views.editClasses, name='edit-classes'),
     path('tutor-finder/', views.tutorFinder, name='tutor-finder'),
+    path('tutor-profile/', views.tutorProfile, name='tutor-profile'),
+    path('support/', views.support, name='support'),
 ]
 

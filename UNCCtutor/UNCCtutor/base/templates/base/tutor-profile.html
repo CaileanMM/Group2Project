@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div id="profile-container-image-background" class="profile-container">
+    <div class="user-left-container">
+        
+
+        <p class="welcome-text">Welcome to your tutor profile.</p>
+        <p class="welcome-text">Below you will be able to edit your profile.</p>
+        <div class="info-container">
+            <div class="info-text">Professor Jonathan Pork </div>
+            <div class="info-text">Master under water ceramic technician</div>
+        </div>
+
+        <div class="info-container">
+            <div class="info-text">Bio:</div>
+            <div class="info-text">Hello I am professor Pork, I am excited to get started with you today!</div>
+        </div>
+
+        <div class="info-container">
+            <div class="info-text">Skills:</div>
+            <div class="info-text">Python (Expert)</div>
+            <div class="info-text">SQL (Expert)</div>
+            <div class="info-text">System Networks (Expert)</div>
+        </div>
+
+        <div class="edit-button-container">
+            <a href="{% url 'edit-profile' %}" class="edit-button">Edit</a>
+        </div>
+    </div>
+
+
+    <div class="user-right-column">
+        <div class="info-container" id="classes">
+            <div class="user-classes-title">Currently Tutoring In:</div>
+            <div class="user-classes">ITSC-1213</div>
+            <div class="user-classes">MATH-1213</div>
+            <div class="user-classes">ITIS-2181</div>
+        </div>
+        <div class="edit-button-container">
+            <a href="{% url 'edit-classes' %}" class="edit-button">Edit Classes</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

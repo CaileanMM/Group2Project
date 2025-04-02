@@ -27,3 +27,5 @@ if __name__ == '__main__':
 #Set-ExecutionPolicy RemoteSigned –Scope Process
 #env\scripts\activate
 #python manage.py runserver
+
+#source eds_venv/bin/activate

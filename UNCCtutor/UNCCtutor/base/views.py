@@ -73,3 +73,11 @@ def editClasses(request):
 def tutorFinder(request):
     context = {}
     return render(request, 'base/tutor-finder.html', context)
+
+def tutorProfile(request):
+    context = {}
+    return render(request, 'base/tutor-profile.html', context)
+
+def support(request):
+    context = {}
+    return render(request, 'base/support.html' , context)
