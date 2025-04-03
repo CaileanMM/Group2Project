@@ -52,15 +52,14 @@ def registerPage(request):
             login(request, user)
             # return redirect('home')
         else:
-            messages.error(request, "An error occured dufring registeration")
-
-
+            messages.error(request, "An error occurred during registration")
     return render(request, 'base/register.html', {'form':form})
 
 
 def userProfile(request, pk):
     user = User.objects.get(id=pk)
-    context = {'user': user}
+    bio = User.bio
+    context = {'user': user, 'bio': bio}
     return render(request, 'base/profile.html', context)
 
 def logoutUser(request):
