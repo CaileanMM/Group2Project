@@ -6,9 +6,9 @@ from .models import User
 class MyUserCreationForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['name','username', 'email', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']
 
 class UserProfileForm(ModelForm):
     class Meta:
         model = User
-        fields = ['avatar', 'name', 'username', 'email', 'bio']
+        fields = ['avatar', 'username', 'email', 'bio']

@@ -1,10 +1,21 @@
 {% extends 'main.html' %}
 {% block content %}
 
-    <form method="post">
+    <form class="form" action="" method="POST", enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
+
+        {% for field in form %}
+        <div class="form__group">
+            <label>{{ field.label }}</label>
+            {{field}}
+        </div>
+        {% endfor %}
+
+
+        <div class="form__action">
+            <a class="btn btn--dark" href="{% url 'home' %}">Cancel</a>
+            <button class="btn btn--main" type="submit">Update</button>
+        </div>
     </form>
 
 

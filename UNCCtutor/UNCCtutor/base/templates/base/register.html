@@ -4,19 +4,25 @@
 <div class="login-container">
 
     <form method="POST" action="">
-        {%csrf_token%}
-        <div class="info-container">
-        <div class="info-container">
-            <label>Email:</label>
-            <input type="email" name="email" placeholder = "Enter UNCC email..." />
-        </div>
+        {% csrf_token %}
+        <div class="register-container">
+            {% for field in form %}
+                    <label for="room_name" class="register-field">{{ field.label }}</label>
+                {{ field }}
+            {% endfor %}
+         </div>
 
-        <div class="info-container">
-            <label>Password:</label>
-            <input type="password" name="password" placeholder = "Enter Password..." />
-            <input type="submit" value="Sign Up" />
-        </div>
-  </form>
+{#        <div class="info-container">#}
+{#            <div class="info-container">#}
+{#                <label>Email:</label>#}
+{#                <input type="email" name="email" placeholder = "Enter UNCC email..." />#}
+{#            </div>#}
+{#        <div class="info-container">#}
+{#            <label>Password:</label>#}
+{#            <input type="password" name="password" placeholder = "Enter Password..." />#}
+{#            <input type="submit" value="Sign Up" />#}
+{#        </div>#}
+    </form>
 </div>
 <div class="info-container">
 <div class="not-signed-container">

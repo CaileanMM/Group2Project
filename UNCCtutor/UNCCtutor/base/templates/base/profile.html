@@ -18,7 +18,7 @@
             <div class="info-text">13 Easy LeetCode Questions Solved</div>
         </div>
         <div class="edit-button-container">
-            <a href="{% url 'edit-profile' %}" class="edit-button">Edit</a>
+            <a href="{% url 'edit-profile' user.id %}" class="edit-button">Edit</a>
         </div>
     </div>
     <div class="user-right-column">
@@ -30,6 +30,9 @@
         </div>
         <div class="edit-button-container">
             <a href="{% url 'edit-classes' %}" class="edit-button">Edit Classes</a>
+        </div>
+        <div class="edit-button-container">
+            <a href="{% url 'logout' %}" class="edit-button">Logout</a>
         </div>
     </div>
 </div>

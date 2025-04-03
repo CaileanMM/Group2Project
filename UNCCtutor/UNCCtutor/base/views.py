@@ -2,10 +2,10 @@ from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib import messages
 
-
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from .models import User
-from .forms import MyUserCreationForm
+from .forms import MyUserCreationForm, UserProfileForm
 
 
 # Create your views here.
@@ -31,7 +31,7 @@ def loginPage(request):
 
         if user is not None:
             login(request, user)
-            #  return redirect()
+            return redirect('home')
         else:
             messages.error(request, 'Email OR password does not exist')
     
@@ -41,22 +41,24 @@ def loginPage(request):
 
 def registerPage(request):
 
-    form = MyUserCreationForm()
-
     if request.method == 'POST':
         form = MyUserCreationForm(request.POST)
+        print(form.errors)
         if form.is_valid():
-            user = form.save(commit=False)
+            user = form.save(commit=True)
             user.username = user.username.lower()
             user.save()
             login(request, user)
-            # return redirect('home')
+            return redirect('home')
         else:
             messages.error(request, "An error occurred during registration")
+    else:
+        form = MyUserCreationForm()
     return render(request, 'base/register.html', {'form':form})
 
-
+@login_required(login_url='login')
 def userProfile(request, pk):
+
     user = User.objects.get(id=pk)
     bio = User.bio
     context = {'user': user, 'bio': bio}
@@ -66,9 +68,18 @@ def logoutUser(request):
     logout(request)
     return redirect('home')
 
-def editProfile(request):
-    context = {}
-    return render(request, 'base/edit-profile.html', context)
+@login_required(login_url='login')
+def editProfile(request, pk):
+    user = request.user
+    form = UserProfileForm(request.POST, instance=user)
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('user-profile', pk=user.id)
+
+    return render(request, 'base/edit-profile.html', {'form': form})
 
 def editClasses(request):
     context = {}
