@@ -4,22 +4,24 @@
 <body id="landing_background">
 <div class="login-container">
 
+
     <form method="POST" action="">
         {% csrf_token %}
-        <div class="info-container">
-        <div class="info-container">
-            <label>Email:</label>
-            <input id="username" type="email" name="email" placeholder = "Enter UNCC email..." />
-        </div>
+        <div class="register-container">
+            <div class="field-container">
+                <label>Email:</label>
+                <input id="username" type="email" name="email" placeholder = "Enter UNCC email..." />
+            </div>
 
-        <div class="info-container">
+            <div class="field-container">
             <label>Password:</label>
             <input type="password" name="password" placeholder = "Enter Password..." />
-                <button type="submit">Login</button>
+            </div>
+            <button class="sign-up-button" type="submit">Login</button>
         </div>
 
   </form>
-</div>
+
 <!--    <form class="form" action="" method="POST">-->
 <!--                -->
 <!--              <div class="form__group form__group">-->
@@ -57,15 +59,16 @@
 <!--              </button>-->
 <!--            </form>-->
 
-<div class="info-container">
-    <div class="not-signed-container">
-        <label class="info-text">Not signed up yet?</label>
-        <a class="sign-up-button" href='{% url "register" %}'>Sign up</a>
-    </div>
-       
-    <div class="not-signed-container">
-        <label class="info-text">Are you a tutor?</label>
-        <a class="sign-up-button" id="tutor-profile-button" href='{% url "tutor-profile" %}'>Tutor Profile</a>
+    <div class="info-container">
+        <div class="not-signed-container">
+            <label class="info-text">Not signed up yet?</label>
+            <a class="sign-up-button" href='{% url "register" %}'>Sign up</a>
+        </div>
+
+        <div class="not-signed-container">
+            <label class="info-text">Are you a tutor?</label>
+            <a class="sign-up-button" id="tutor-profile-button" href='{% url "tutor-profile" %}'>Tutor Profile</a>
+        </div>
     </div>
 </div>
 </body>
