@@ -4,16 +4,14 @@
 <body id="landing_background">
 <div class="login-container">
 
-    <div method="POST" action="">
+    <form method="POST" action="">
         {% csrf_token %}
         <div class="register-container">
             {% for field in form %}
                     <label for="room_name" class="register-field" >{{ field.label }}</label>
                 {{ field }}
             {% endfor %}
-{#            <div class="sign-up-button">#}
-                <button class="sign-up-button" type="submit">Submit</button>
-{#            </div>#}
+            <button class="sign-up-button" type="submit">Submit</button>
         </div>
 
 {#        <div class="info-container">#}
@@ -27,13 +25,12 @@
 {#            <input type="submit" value="Sign Up" />#}
 {#        </div>#}
 
-    </div>
+    </form>
     <div class="info-container">
         <div class="not-signed-container">
             <label class="info-text">Already Signed Up?</label>
             <a class="sign-up-button" href='{% url "login" %}'>Login</a>
         </div>
-    </form>
     </div>
 </div>
 </body>
