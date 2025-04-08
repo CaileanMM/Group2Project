@@ -10,7 +10,12 @@
         <a class="navbar-text" href="{% url 'home' %}">Home</a>
         <a class="navbar-text" href="{% url 'tutor-finder' %}">Find a Tutor</a>
         <a href="{% url 'support' %}" class="navbar-text">Support</a>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="navbar-text">Log Out</a>
+        {% else %}
         <a href="{% url 'login' %}" class="navbar-text">Log In</a>
+        {% endif%}
+
         {% if request.user.is_authenticated %}
             <a class="navbar-pic" href="{% url 'user-profile' user.id %}"><img src="{{ user.avatar.url }}"/></a>
         {% else %}

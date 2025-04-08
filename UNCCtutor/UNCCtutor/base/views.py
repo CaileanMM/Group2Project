@@ -12,6 +12,7 @@ from .forms import MyUserCreationForm, UserProfileForm
 def home(request):
     return render(request, 'base/landing.html')
 
+
 def loginPage(request):
 
     page = 'login'
@@ -41,8 +42,9 @@ def loginPage(request):
 
 def registerPage(request):
 
+    form = MyUserCreationForm(request.POST) 
     if request.method == 'POST':
-        form = MyUserCreationForm(request.POST)
+        
         print(form.errors)
         if form.is_valid():
             user = form.save(commit=True)
