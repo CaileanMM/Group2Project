@@ -31,8 +31,6 @@
 
 .navbar-pic{
     margin: 10px 10px 10px 10px;
-    width: 75px;
-    height: 75px;
 }
 
 .navbar-text{
@@ -183,38 +181,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/*Register Page*/
-
-.register-container{
-    width: 350px;
-    height: 350px;
-    font: 20px "roboto", sans-serif;
-    margin-top: 20px;
-    color: white;
-    border: 2px white;
-    background: #005035;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 3px solid black;
-}
-
-.field-container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.register-field{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 /*Tutor Finder Page*/
