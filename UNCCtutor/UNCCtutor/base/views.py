@@ -4,6 +4,7 @@ from django.contrib import messages
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from .models import User
 from .forms import MyUserCreationForm, UserProfileForm
 
@@ -89,6 +90,7 @@ def editClasses(request):
 
 
 def tutorFinder(request):
+    messages.info(request, 'Alert!!!')
     context = {}
     return render(request, 'base/tutor-finder.html', context)
 
