@@ -1,3 +1,4 @@
+import swal from 'sweetalert';
 function zoomAlert() {
-    alert("This feature is not available yet");
+    swal("Connecting to Zoom");
 }
