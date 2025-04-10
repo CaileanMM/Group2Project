@@ -1,10 +1,11 @@
+
 {% extends 'main.html' %}
 {% block content %}
 
 <body id="landing_background">
 <div class="login-container">
 
-
+    <div id="form-container">
     <form method="POST" action="">
         {% csrf_token %}
         <div class="register-container">
@@ -21,6 +22,7 @@
         </div>
 
   </form>
+    </div>
 
 <!--    <form class="form" action="" method="POST">-->
 <!--                -->

@@ -28,6 +28,8 @@ def loginPage(request):
             user = User.objects.get(email=email)
         except:
             messages.error(request, 'incorrect uncc email')
+
+
         
         user = authenticate(request, email=email, password=password)
 
