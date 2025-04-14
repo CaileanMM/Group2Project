@@ -3,6 +3,7 @@
 
 <body id="landing_background">
 <div class="login-container">
+    {% include 'messages.html' %}
     <div id="form-container">
     <form method="POST" action="">
         {% csrf_token %}
@@ -14,6 +15,7 @@
             <button class="sign-up-button" type="submit">Submit</button>
         </div>
     </form>
+    
     </div>
     <div class="info-container">
         <div class="not-signed-container">
