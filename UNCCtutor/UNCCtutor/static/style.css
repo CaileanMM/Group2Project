@@ -367,13 +367,9 @@
 
 /* Support Page */
 .support-page-container {
-    margin: 0 auto;
-    text-align: center;
     background-image: url("../static/images/UNCC_Background.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-
-
     color: rgb(255, 255, 255);
     font-family:  "Roboto", sans-serif;
 }
