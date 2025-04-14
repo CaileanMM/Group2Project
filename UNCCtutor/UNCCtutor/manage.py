@@ -29,3 +29,5 @@ if __name__ == '__main__':
 #python manage.py runserver
 
 #source eds_venv/bin/activate
+
+#Hard reset CMD SHIFT R
