@@ -96,7 +96,9 @@ def tutorFinder(request):
     return render(request, 'base/tutor-finder.html', context)
     
 def ChooseATutor(request):
-    context = {}
+    context = {
+        "Test" : ["Bob","William","Stephen"],
+    }
     return render(request, 'base/choose-a-tutor.html', context)
 
 def zoomPage(request):

@@ -6,7 +6,16 @@
     <p class = "title-style"">Choose a Tutor</p>
 
     <div class="choose-a-tutor-Body">
-        <div class = "choose-a-tutor-Profile"></div>
+
+        {% for tutorName in Test %}
+        <div class = "choose-a-tutor-Profile">
+            <div class = "choose-a-tutor-Profile-Image"><img src = "../static/images/profile-pic-placeholder.png"/></div>
+            <div class = "choose-a-tutor-Profile-Name">{{tutorName}}</div>
+            <div class = "choose-a-tutor-Profile-Rating"></div>
+            <div class = "choose-a-tutor-Profile-Major"></div>
+        </div>
+        {% endfor %}
+        
     </div>
     
 </body>
