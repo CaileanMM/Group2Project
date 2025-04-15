@@ -143,6 +143,67 @@
     font: 20px "roboto", sans-serif;
 }
 
+/*Edit Profile Page*/
+.edit-profile-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-profile-buttons-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.edit-profile-button {
+    background-color: white;
+    color: #1f8ada;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.edit-profile-button:hover {
+    background-color: #1f8ada;
+    color: #ffffff;
+}
+
+.edit-profile-button {
+    background-color: white;
+    color: #ff1125;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+#edit-profile-cancel:hover {
+    background-color: #ff1125;
+    color: #ffffff;
+}
+
+#edit-profile-update {
+    background-color: white;
+    color: #1f8ada;
+}
+#edit-profile-update:hover {
+    background-color: #1f8ada;
+    color: #ffffff;
+}
+
+
 /*Tutor profile*/
 
 .welcome-text{  
