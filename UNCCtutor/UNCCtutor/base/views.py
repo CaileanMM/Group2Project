@@ -92,9 +92,12 @@ def editClasses(request):
 
 
 def tutorFinder(request):
-    messages.info(request, 'Alert!!!')
     context = {}
     return render(request, 'base/tutor-finder.html', context)
+    
+def ChooseATutor(request):
+    context = {}
+    return render(request, 'base/choose-a-tutor.html', context)
 
 def zoomPage(request):
     context = {}

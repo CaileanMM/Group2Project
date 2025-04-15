@@ -33,6 +33,7 @@ urlpatterns = [
     path('edit-profile/<str:pk>', views.editProfile, name='edit-profile'),
     path('edit-classes/', views.editClasses, name='edit-classes'),
     path('tutor-finder/', views.tutorFinder, name='tutor-finder'),
+    path('choose-a-tutor/', views.ChooseATutor, name='choose-a-tutor'),
     path('zoom-page/', views.zoomPage, name='zoom-page'),
     path('support/', views.support, name='support'),
     path('tutor-profile/', views.tutorProfile, name='tutor-profile'),
