@@ -15,3 +15,10 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['username']
 
 
+class Tutor(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='tutor_profile')
+    expertise = models.TextField(null=True)
+    rating = models.FloatField(null=True)
+
+    def __str__(self):
+        return f"Tutor Profile of {self.user.username}"
