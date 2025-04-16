@@ -22,3 +22,9 @@ class Tutor(models.Model):
 
     def __str__(self):
         return f"Tutor Profile of {self.user.username}"
+
+class Classes(models.Model):
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.name
