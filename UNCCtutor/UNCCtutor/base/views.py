@@ -84,7 +84,12 @@ def editProfile(request, pk):
             form.save()
             return redirect('user-profile', pk=user.id)
 
-    return render(request, 'base/edit-profile.html', {'form': form})
+    else:
+        form = UserProfileForm(instance=user)
+
+    context = {'form': form, 'user': user}
+
+    return render(request, 'base/edit-profile.html', context)
 
 def editClasses(request):
     context = {}

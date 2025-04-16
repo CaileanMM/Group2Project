@@ -151,6 +151,19 @@
     align-items: center;
 }
 
+.form__group__edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.edit-form-label{
+
+    text-align: center;
+}
+
 #edit-profile-buttons-container{
     display: flex;
     justify-content: space-around;
