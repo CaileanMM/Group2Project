@@ -10,13 +10,13 @@
         {% csrf_token %}
         <div class="register-container">
             <div class="field-container">
-                <label>Email:</label>
+                <label class="login-label">Email:</label>
                 <input id="username" type="email" name="email" placeholder = "Enter UNCC email..." />
             </div>
 
             <div class="field-container">
-            <label>Password:</label>
-            <input type="password" name="password" placeholder = "Enter Password..." />
+                <label class="login-label">Password:</label>
+                <input type="password" name="password" placeholder = "Enter Password..." />
             </div>
             <button class="sign-up-button" type="submit">Login</button>
         </div>
