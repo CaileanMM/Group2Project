@@ -434,15 +434,46 @@
     margin: 2vh;
     padding: 10px;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
 }
 
-.choose-a-tutor-Profile > div > img {
+.choose-a-tutor-Profile:hover {
+    background-color: #007852;
+    box-shadow: 10px 10px 20px grey;
+}   
+
+.choose-a-tutor-Profile-Image {
     padding: 10%;
 }
 
-.choose-a-tutor-Profile-Info > div{
+.choose-a-tutor-Profile-Info {
     padding: 1vh;
 }
+
+.choose-a-tutor-Profile-Button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.choose-a-tutor-Profile-Button > a > input {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #008b5e;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    height: 5vh;
+    width: 10vh;
+    margin-top: 1vh;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.choose-a-tutor-Profile-Button > a > input:hover {
+    background-color: rgb(225, 225, 225);
+    color: #006b47;
+}
+
 /*Zoom page*/
 .zoom-page {
     background-image: url("../static/images/AtkinsLibrary.jpg");

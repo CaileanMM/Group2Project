@@ -9,16 +9,20 @@
 
         {% for Tutor in Major %}
         <div class = "choose-a-tutor-Profile">
-            <div class = "choose-a-tutor-Profile-Image"><img src = "../static/images/profile-pic-placeholder.png"/></div>
+                <div class = "choose-a-tutor-Profile-Image"><img src = "../static/images/profile-pic-placeholder.png"/></div>
 
-            <div class = "choose-a-tutor-Profile-Info">
-                <div class = "choose-a-tutor-Profile-Name">Name: {{Tutor}}</div>
+                <div class = "choose-a-tutor-Profile-Info">
+                    <div class = "choose-a-tutor-Profile-Name">Name: {{Tutor}}</div>
 
-            <div class = "choose-a-tutor-Profile-Rating">Rating: </div>
+                    <div class = "choose-a-tutor-Profile-Rating">Rating: </div>
 
-            <div class = "choose-a-tutor-Profile-Major">Major: {{Tutor}}</div>
-            </div>
+                    <div class = "choose-a-tutor-Profile-Major">Major: {{Tutor}}</div>
+                </div>
 
+                <div class = "choose-a-tutor-Profile-Button">
+                    <a href = "{% url 'tutor-profile' %}" type="submit"><input type="submit" value="View Profile" /></a>
+                    <a href = "{}" type="submit"><input type="submit" value="Connect" /></a>
+                </div>
         </div>
         {% endfor %}
         
