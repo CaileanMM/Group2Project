@@ -7,12 +7,18 @@
 
     <div class="choose-a-tutor-Body">
 
-        {% for tutorName in Test %}
+        {% for Tutor in Major %}
         <div class = "choose-a-tutor-Profile">
             <div class = "choose-a-tutor-Profile-Image"><img src = "../static/images/profile-pic-placeholder.png"/></div>
-            <div class = "choose-a-tutor-Profile-Name">{{tutorName}}</div>
-            <div class = "choose-a-tutor-Profile-Rating"></div>
-            <div class = "choose-a-tutor-Profile-Major"></div>
+
+            <div class = "choose-a-tutor-Profile-Info">
+                <div class = "choose-a-tutor-Profile-Name">Name: {{Tutor}}</div>
+
+            <div class = "choose-a-tutor-Profile-Rating">Rating: </div>
+
+            <div class = "choose-a-tutor-Profile-Major">Major: {{Tutor}}</div>
+            </div>
+
         </div>
         {% endfor %}
         

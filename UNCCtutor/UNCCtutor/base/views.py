@@ -100,9 +100,14 @@ def tutorFinder(request):
     context = {}
     return render(request, 'base/tutor-finder.html', context)
     
+@login_required(login_url='login')
 def ChooseATutor(request):
+    tutorName1 = "John"
+    tutorName2 = "William"
+    tutorName3 = "Stephen"
     context = {
-        "Test" : ["Bob","William","Stephen"],
+        "Name" : [tutorName1,tutorName2,tutorName3],
+        "Major" : ["Math","Science","English"],
     }
     return render(request, 'base/choose-a-tutor.html', context)
 

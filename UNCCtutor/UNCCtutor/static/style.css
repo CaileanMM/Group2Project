@@ -440,7 +440,9 @@
     padding: 10%;
 }
 
-
+.choose-a-tutor-Profile-Info > div{
+    padding: 1vh;
+}
 /*Zoom page*/
 .zoom-page {
     background-image: url("../static/images/AtkinsLibrary.jpg");
