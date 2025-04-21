@@ -9,8 +9,10 @@
         {% csrf_token %}
         <div class="register-container">
             {% for field in form %}
-                    <label for="room_name" class="register-field" >{{ field.label }}</label>
-                {{ field }}
+                <div class="field-container">
+                    <label for="room_name" class="login-label" >{{ field.label }}</label>
+                    {{ field }}
+                </div>
             {% endfor %}
             <button class="sign-up-button" type="submit">Submit</button>
         </div>
