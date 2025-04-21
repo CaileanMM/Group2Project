@@ -307,6 +307,36 @@
     align-items: center;
 }
 
+#error-container{
+    background: #ff4f4f;
+    width: 350px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 7px;
+    border: 2px #9b3434 solid;
+}
+
+#error-message{
+    text-align: center;
+    color: white;
+    font: 18px "Roboto", sans-serif;
+}
+
+#error-exit-button{
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    font-size: 30px;
+}
+
+#error-exit-button:hover{
+    color: red;
+    cursor: pointer;
+}
+
 /*Tutor Finder Page*/
 .tutor-finder {
     background-image: url("../static/images/UNCC_Background.jpeg");
