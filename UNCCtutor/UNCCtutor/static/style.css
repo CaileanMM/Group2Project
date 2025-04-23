@@ -458,12 +458,13 @@
 }
 
 .choose-a-tutor-Profile {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    align-items: center;
+    justify-content: left;
     color: white;
     background-color: #005035;
-    width: 40vh;
-    height: 20vh;
+    width: 50vh;
+    height: 30vh;
     margin: 2vh;
     padding: 10px;
     border-radius: 10px;
@@ -471,7 +472,7 @@
 }
 
 .choose-a-tutor-Profile:hover {
-    background-color: #007852;
+    background-color: #006243;
     box-shadow: 10px 10px 20px grey;
 }   
 
@@ -484,15 +485,14 @@
 }
 
 .choose-a-tutor-Profile-Button {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 10px 20px;
 }
 
 .choose-a-tutor-Profile-Button > a > input {
     font-weight: bold;
     font-size: 15px;
-    background-color: #008b5e;
-    color: white;
+    background-color: white;
+    color: #006b47;
     border-radius: 10px;
     border-style: none;
     height: 5vh;
@@ -503,8 +503,8 @@
 }
 
 .choose-a-tutor-Profile-Button > a > input:hover {
-    background-color: rgb(225, 225, 225);
-    color: #006b47;
+    background-color: #008b5e;
+    color: white;
 }
 
 /*Zoom page*/
