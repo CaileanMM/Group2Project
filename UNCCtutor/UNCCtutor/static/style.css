@@ -75,6 +75,7 @@
 .user-left-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -144,6 +145,27 @@
     margin-top: 10px;
     text-align: center;
     font: 20px "roboto", sans-serif;
+}
+
+#username-container{
+    width: 250px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #005035;
+}
+
+#info-username{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font: 32px "roboto", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /*Edit Profile Page*/
