@@ -12,7 +12,7 @@ class MyUserCreationForm(UserCreationForm):
 class UserProfileForm(ModelForm):
     class Meta:
         model = User
-        fields = ['avatar', 'username', 'email', 'bio', 'skills', 'currentYear']
+        fields = ['username', 'email', 'bio', 'skills', 'currentYear']
         widgets = {
             'bio': forms.Textarea(attrs={'rows': 3}),
             'skills': forms.Textarea(attrs={'rows': 2}),
