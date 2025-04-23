@@ -1,3 +1,4 @@
+from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from .models import User
@@ -11,4 +12,9 @@ class MyUserCreationForm(UserCreationForm):
 class UserProfileForm(ModelForm):
     class Meta:
         model = User
-        fields = ['avatar', 'username', 'email', 'bio']
+        fields = ['avatar', 'username', 'email', 'bio', 'skills', 'currentYear']
+        widgets = {
+            'bio': forms.Textarea(attrs={'rows': 3}),
+            'skills': forms.Textarea(attrs={'rows': 2}),
+            'currentYear': forms.TextInput(attrs={'placeholder': 'e.g. Sophomore'}),
+        }

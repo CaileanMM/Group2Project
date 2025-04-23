@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .models import User
+from .models import User, Classes
 from .forms import MyUserCreationForm, UserProfileForm
 
 
@@ -65,8 +65,8 @@ def registerPage(request):
 def userProfile(request, pk):
 
     user = User.objects.get(id=pk)
-    bio = User.bio
-    context = {'user': user, 'bio': bio}
+
+    context = {'user': user, 'bio': user.bio, 'userClasses': user.classes.all(),'skills':user.skills, 'currentYear':user.currentYear}
     return render(request, 'base/profile.html', context)
 
 def logoutUser(request):
@@ -91,9 +91,29 @@ def editProfile(request, pk):
 
     return render(request, 'base/edit-profile.html', context)
 
+@login_required(login_url='login')
 def editClasses(request):
-    context = {}
-    return render(request, 'base/edit-classes.html', context)
+    user = request.user
+    all_classes = Classes.objects.all()
+
+    if request.method == 'POST':
+        # Get the selected class IDs from the form (checkboxes)
+        selected_class_ids = request.POST.getlist('classes')
+        
+        # Update the user's classes (add/remove classes)
+        user.classes.set(selected_class_ids)
+        
+        # Show a success message
+        messages.success(request, 'Your classes have been updated successfully!')
+        
+        # Redirect to the user profile page after the update
+        return redirect('user-profile', pk=user.id)  # Redirect to the profile page
+
+    # Pass both the current classes and all available classes to the template
+    return render(request, 'base/edit-classes.html', {
+        'user_classes': user.classes.all(),  # Get current classes the user is enrolled in
+        'all_classes': all_classes,  # Get all available classes
+    })
 
 
 def tutorFinder(request):

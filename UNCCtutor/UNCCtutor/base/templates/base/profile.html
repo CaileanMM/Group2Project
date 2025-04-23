@@ -2,31 +2,33 @@
 {% block content %}
 
 <div class="profile-container">
+    
     <div class="user-left-container">
-
         <div class="info-container">
             <div class="info-text">{{ user.username }}:</div>
-            <div class="info-text">Sophomore</div>
+            <div class="info-text">{{currentYear}}</div>
         </div>
         <div class="info-container">
             <div class="info-text">Bio:</div>
-            <div class="info-text">{{ user.bio }}</div>
+            <div class="info-text">{{ bio }}</div> 
         </div>
         <div class="info-container">
             <div class="info-text">Skills:</div>
-            <div class="info-text">Python (Familiar)</div>
-            <div class="info-text">13 Easy LeetCode Questions Solved</div>
+            <div class="info-text">{{skills}}</div>
         </div>
         <div class="edit-button-container">
             <a href="{% url 'edit-profile' user.id %}" class="edit-button">Edit</a>
         </div>
     </div>
+
     <div class="user-right-column">
         <div class="info-container" id="classes">
             <div class="user-classes-title">Current Classes:</div>
-            <div class="user-classes">ITSC-1213</div>
-            <div class="user-classes">MATH-1213</div>
-            <div class="user-classes">ITIS-2181</div>
+            {% for cls in userClasses %}
+                <div class="user-classes">{{ cls.name }}</div> 
+            {% empty %}
+                <div class="user-classes">No classes enrolled yet.</div>
+            {% endfor %}
         </div>
         <div class="edit-button-container">
             <a href="{% url 'edit-classes' %}" class="edit-button">Edit Classes</a>
@@ -36,4 +38,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
