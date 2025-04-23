@@ -1,9 +1,12 @@
 {% if messages %}
+
   {% for message in messages %}
-    <div class="alert alert-success alert-dismissible fade show" role="alert" id="error-container">
-      <strong id="error-message">{{ message }}</strong>
-      <button id="error-exit-button" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">×</button>
-    </div>
+      {% if 'error' in message.tags %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert" id="error-container">
+          <strong id="error-message">{{ message }}</strong>
+          <button id="error-exit-button" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">×</button>
+        </div>
+      {% endif %}
   {% endfor %}
 {% endif %}
 

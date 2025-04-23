@@ -21,7 +21,9 @@
             <div class="info-text">{{ bio }}</div> 
         </div>
         <div class="edit-button-container">
-            <a href="{% url 'edit-profile' user.id %}" class="edit-button">Edit</a>
+            {% if request.user.id == user.id %}
+                <a href="{% url 'edit-profile' user.id %}" class="edit-button">Edit</a>
+            {% endif %}
         </div>
     </div>
 
@@ -43,12 +45,14 @@
                 {% endif %}
             {% endfor %}
         </div>
+        {% if request.user.id == user.id %}
         <div class="edit-button-container">
             <a href="{% url 'edit-classes' %}" class="edit-button">Edit Classes</a>
         </div>
         <div class="edit-button-container">
             <a href="{% url 'logout' %}" class="edit-button">Logout</a>
         </div>
+        {% endif %}
     </div>
 </div>
 
