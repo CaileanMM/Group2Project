@@ -84,11 +84,13 @@
     justify-content: center;
 }
 
+
+
 .edit-button{
     color: white;
     font: 30px "roboto", sans-serif;
     text-decoration: none;
-    height: 75px;
+    height: 60px;
     width: 200px;
     background-color: #005035;
     display: flex;
@@ -96,10 +98,12 @@
     align-items: center;
     margin-top: 10px;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    border: 2px solid black;
 }
 
 .edit-button:hover{
-    background-color: #00462f;
+    background-color: #006541;
 }
 
 .info-container{
@@ -116,7 +120,7 @@
 
     /*Potential styling*/
     border-radius: 20px;
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
 .info-container#classes{
