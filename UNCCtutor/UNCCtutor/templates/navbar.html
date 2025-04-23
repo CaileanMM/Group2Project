@@ -17,9 +17,9 @@
         {% endif%}
 
         {% if request.user.is_authenticated %}
-            <a class="navbar-pic" href="{% url 'user-profile' user.id %}"><img src="{{ user.avatar.url }}"/></a>
+            <a class="navbar-pic" href="{% url 'user-profile' request.user.id %}"><img src="{{ user.avatar.url }}"/></a>
         {% else %}
-            <a class="navbar-pic" href="{% url 'user-profile' user.id %}"><img src="{% static 'images/profile-pic-placeholder.png' %}"/></a>
+            <a class="navbar-pic" href="{% url 'user-profile' request.user.id %}"><img src="{% static 'images/profile-pic-placeholder.png' %}"/></a>
         {% endif %}
     </div>
 </div>
