@@ -5,18 +5,18 @@
 <div class="login-container">
     {% include 'messages.html' %}
     <div id="form-container">
-    <form method="POST" action="">
-        {% csrf_token %}
-        <div class="register-container">
-            {% for field in form %}
-                <div class="field-container">
-                    <label for="room_name" class="login-label" >{{ field.label }}</label>
-                    {{ field }}
-                </div>
-            {% endfor %}
-            <button class="sign-up-button" type="submit">Submit</button>
-        </div>
-    </form>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="register-container">
+                {% for field in form %}
+                    <div class="field-container">
+                        <label for="room_name" class="login-label" >{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <button class="sign-up-button" type="submit">Submit</button>
+            </div>
+        </form>
     
     </div>
     <div class="info-container">
