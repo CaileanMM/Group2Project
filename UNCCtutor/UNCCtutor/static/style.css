@@ -63,7 +63,7 @@
 
 /*Profile Page*/
 .profile-container{
-    margin-top: 20px;
+    height: 798px;
     display: flex;
     font-family: "Roboto";
     justify-content: space-around;
@@ -252,6 +252,7 @@
 
 }
 #profile-container-image-background{
+    height: 100%;
     background-image: url("../static/images/UNCC_Background.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -299,7 +300,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    test-align: center;
+    text-align: center;
     flex-direction: column;
 }
 
