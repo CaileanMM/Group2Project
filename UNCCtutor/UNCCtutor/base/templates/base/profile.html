@@ -4,24 +4,21 @@
 <div class="profile-container">
     
     <div class="user-left-container">
-        <div id="username-container">
-            <div class="info-text" id="info-username">{{ user.username }}:</div>
-        </div>
-        <div class="info-container">
+        <div class="info-container" id="username-container">
+            <div class="info-text" id="info-username">{{ user.username }}</div>
             {% if user.tutor %}
-                <div class="info-text-header">Tutor</div>
+                <div class="info-text">Tutor</div>
             {% else %}
-                <div class="info-text-header">Current Year:</div>
                 <div class="info-text">{{currentYear}}</div>
             {% endif %}
         </div>
-        <div class="info-container">
-            <div class="info-text-header">Bio:</div>
-            <div class="info-text">{{ bio }}</div> 
-        </div>
-        <div class="info-container">
+        <div class="info-container" id="skills">
             <div class="info-text-header">Skills:</div>
             <div class="info-text">{{skills}}</div>
+        </div>
+        <div class="info-container" id="bio">
+            <div class="info-text-header">Bio:</div>
+            <div class="info-text">{{ bio }}</div> 
         </div>
         <div class="edit-button-container">
             <a href="{% url 'edit-profile' user.id %}" class="edit-button">Edit</a>
@@ -37,7 +34,7 @@
             {% endif %}
 
             {% for cls in userClasses %}
-                <div class="user-classes">{{ cls.name }}</div> 
+                <div class="user-classes">{{ cls.name }}</div>
             {% empty %}
                 {% if user.tutor %}
                     <div class="user-classes">Not tutoring any classes.</div>

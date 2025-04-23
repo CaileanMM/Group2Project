@@ -47,6 +47,7 @@
 }
 
 .bar-left{
+
     display: flex;
     justify-content: flex-start;
     width: fit-content
@@ -75,7 +76,7 @@
 
 .user-left-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -124,17 +125,44 @@
     border: 2px solid black;
 }
 
+.info-container#username-container{
+    width: 450px;
+}
+
+.info-container#skills{
+    justify-content: flex-start;
+    height: auto;
+    min-height: 100px;
+    max-height: 400px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.info-container#bio{
+    justify-content: flex-start;
+    height: auto;
+    min-height: 100px;
+    max-height: 400px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap
+}
+
 .info-container#classes{
-    height: 490px;
+    height: auto;
+    padding-bottom: 20px;
     width: 400px;
     justify-content: normal;
 }
 
 .user-classes{
-    margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
-    border-bottom: 2px solid white;
+    padding-top: 15px;
+    border-top: 2px solid white;
 }
 
 .user-classes-title{
@@ -158,16 +186,7 @@
     font: 32px "roboto", sans-serif;
 }
 
-#username-container{
-    width: 250px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    background: #005035;
-}
+
 
 #info-username{
     color: white;
