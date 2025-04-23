@@ -9,6 +9,7 @@ class User(AbstractUser):
     classes = models.ManyToManyField('Classes', blank=True)
     skills = models.TextField(null=True,blank=True)
     currentYear = models.CharField(max_length=50, null=True, blank=True)
+    tutor = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
