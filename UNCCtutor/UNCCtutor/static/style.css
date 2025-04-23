@@ -145,8 +145,7 @@
     height: auto;
     min-height: 100px;
     max-height: 400px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 10px 30px 30px 30px;
     display: flex;
     flex-wrap: wrap
 }
