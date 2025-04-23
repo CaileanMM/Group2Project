@@ -147,6 +147,20 @@
 }
 
 /*Edit Profile Page*/
+.edit-profile-container{
+    margin-top: 20px;
+    display: flex;
+    background: #005035;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 550px;
+    font: 20px "Roboto", sans-serif;
+    color: white;
+    border-radius: 20px;
+    border: 3px;
+}
+
 .edit-profile-form{
     display: flex;
     flex-direction: column;
@@ -159,7 +173,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: 10px;
 }
 
 .edit-form-label{
