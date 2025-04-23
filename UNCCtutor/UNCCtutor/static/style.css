@@ -535,6 +535,7 @@
 .choose-a-tutor-Profile {
     display: flex;
     color: white;
+    align-items: center;
     background-color: #005035;
     width: 40vh;
     height: 30vh;
@@ -542,6 +543,14 @@
     padding: 10px;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
+}
+
+.tutor-card-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding-left: 10px;
 }
 
 .choose-a-tutor-Profile:hover {
@@ -557,8 +566,19 @@
     padding: 1vh;
 }
 
+.choose-a-tutor-Profile-Major{
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .choose-a-tutor-Profile-Button {
+    width: 40px;
     padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .choose-a-tutor-Profile-Button > a > input {

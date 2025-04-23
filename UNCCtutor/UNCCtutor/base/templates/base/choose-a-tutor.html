@@ -7,22 +7,26 @@
 
     <div class="choose-a-tutor-Body">
 
-        {% for Tutor in Major %}
+        {% for tutor in tutors %}
         <div class = "choose-a-tutor-Profile">
+            <div class="tutor-card-left">
                 <div class = "choose-a-tutor-Profile-Image"><img src = "../static/images/profile-pic-placeholder.png"/></div>
 
                 <div class = "choose-a-tutor-Profile-Info">
-                    <div class = "choose-a-tutor-Profile-Name">Name: {{Tutor}}</div>
+                    <div class = "choose-a-tutor-Profile-Name">Name: {{tutor.username}}</div>
 
-                    <div class = "choose-a-tutor-Profile-Rating">Rating: </div>
+                    <div class = "choose-a-tutor-Profile-Rating">Rating: N/A</div>
 
-                    <div class = "choose-a-tutor-Profile-Major">Major: {{Tutor}}</div>
+                    <div class = "choose-a-tutor-Profile-Major">Skills: {{tutor.skills|default:"Not Specified"}}</div>
                 </div>
+            </div>
 
+            <div class="tutor-card-right">
                 <div class = "choose-a-tutor-Profile-Button">
-                    <a href = "{% url 'tutor-profile' %}" type="submit"><input type="submit" value="View Profile" /></a>
+                    <a href = "{% url 'user-profile' tutor.id%}" type="submit"><input type="submit" value="View Profile" /></a>
                     <a href = "{% url 'zoom-page' %}" type="submit"><input type="submit" value="Connect" /></a>
                 </div>
+            </div>
         </div>
         {% endfor %}
         
