@@ -49,6 +49,7 @@
 .bar-left{
     display: flex;
     justify-content: flex-start;
+    width: fit-content
 }
 
 .navbar-pic{
