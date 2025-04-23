@@ -339,8 +339,6 @@
     background-color: #1e41ff;
 }
 
-
-
 .login-container{
     display: flex;
     justify-content: center;
@@ -374,10 +372,15 @@
     font: 18px "Roboto", sans-serif;
 }
 
+.info-container#sign-up-container{
+    height: 100px;
+    width: 400px;
+}
+
 .not-signed-container{
-    width: 600px;
+    width: 400px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
