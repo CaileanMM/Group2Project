@@ -151,6 +151,12 @@
     font: 20px "roboto", sans-serif;
 }
 
+.info-text-header{
+    margin-top: 10px;
+    text-align: center;
+    font: 32px "roboto", sans-serif;
+}
+
 #username-container{
     width: 250px;
     height: 75px;

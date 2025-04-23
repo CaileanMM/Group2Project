@@ -8,14 +8,19 @@
             <div class="info-text" id="info-username">{{ user.username }}:</div>
         </div>
         <div class="info-container">
-            <div class="info-text">{{currentYear}}</div>
+            {% if user.tutor %}
+                <div class="info-text-header">Tutor</div>
+            {% else %}
+                <div class="info-text-header">Current Year:</div>
+                <div class="info-text">{{currentYear}}</div>
+            {% endif %}
         </div>
         <div class="info-container">
-            <div class="info-text">Bio:</div>
+            <div class="info-text-header">Bio:</div>
             <div class="info-text">{{ bio }}</div> 
         </div>
         <div class="info-container">
-            <div class="info-text">Skills:</div>
+            <div class="info-text-header">Skills:</div>
             <div class="info-text">{{skills}}</div>
         </div>
         <div class="edit-button-container">
