@@ -67,6 +67,9 @@
     display: flex;
     font-family: "Roboto";
     justify-content: space-around;
+    background-image: url("../static/images/UNCC_Background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .user-left-container{
@@ -645,4 +648,17 @@
 #form-container button[type="submit"]:hover {
     background-color: #008b5e;
     color: white;
+}
+
+.get-started{
+    background-color: white;
+    color: #006b47;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
 }
