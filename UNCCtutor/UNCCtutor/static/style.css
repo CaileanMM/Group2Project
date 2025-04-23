@@ -75,6 +75,7 @@
 .user-left-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -83,11 +84,13 @@
     justify-content: center;
 }
 
+
+
 .edit-button{
     color: white;
     font: 30px "roboto", sans-serif;
     text-decoration: none;
-    height: 75px;
+    height: 60px;
     width: 200px;
     background-color: #005035;
     display: flex;
@@ -95,10 +98,12 @@
     align-items: center;
     margin-top: 10px;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    border: 2px solid black;
 }
 
 .edit-button:hover{
-    background-color: #00462f;
+    background-color: #006541;
 }
 
 .info-container{
@@ -115,7 +120,7 @@
 
     /*Potential styling*/
     border-radius: 20px;
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
 .info-container#classes{
@@ -144,6 +149,27 @@
     margin-top: 10px;
     text-align: center;
     font: 20px "roboto", sans-serif;
+}
+
+#username-container{
+    width: 250px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #005035;
+}
+
+#info-username{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font: 32px "roboto", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /*Edit Profile Page*/
