@@ -4,11 +4,11 @@ from django.contrib.auth.models import AbstractUser
 # Custom user model
 class User(AbstractUser):
     email = models.EmailField(unique=True, null=True)
-    bio = models.TextField(null=True)
+    bio = models.TextField(null=True, default="I'm still setting up my profile!")
     avatar = models.ImageField(null=True, default="profile-pic-placeholder.png")
     classes = models.ManyToManyField('Classes', blank=True)
-    skills = models.TextField(null=True,blank=True)
-    currentYear = models.CharField(max_length=50, null=True, blank=True)
+    skills = models.TextField(null=True,blank=True, default="I'm still setting up my profile!")
+    currentYear = models.CharField(max_length=50, null=True, blank=True, default="I'm still setting up my profile!")
     tutor = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
