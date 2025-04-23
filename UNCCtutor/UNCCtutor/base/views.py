@@ -128,7 +128,7 @@ def ChooseATutor(request):
     tutorName4 = "Hanie"
     context = {
         "Name" : [tutorName1,tutorName2,tutorName3,tutorName4],
-        "Major" : ["Math","Science","English", "Computer Science"],
+        "Major" : ["Math","Science","English", "Computer"],
     }
     return render(request, 'base/choose-a-tutor.html', context)
 
