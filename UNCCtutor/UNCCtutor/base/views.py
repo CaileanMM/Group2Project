@@ -24,13 +24,6 @@ def loginPage(request):
         email = request.POST.get('email').lower()
         password = request.POST.get('password')
 
-        try:
-            user = User.objects.get(email=email)
-        except:
-            messages.error(request, 'incorrect uncc email')
-
-
-        
         user = authenticate(request, email=email, password=password)
 
         if user is not None:
