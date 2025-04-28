@@ -428,27 +428,25 @@
     min-height: 50vh;
     padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     box-shadow: 0px 10px 15px black;
 
 }
 .tutor-finder-Feature {
-    text-align: center;
-    justify-self: flex-start;
+    margin: auto;
 }
 
 .tutor-finder-Feature > h2 {
-    padding: 3vh;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .tutor-finder-Feature > textarea {
     resize: none;
     padding: 10px;
     height: 20vh;
-    width: 40vh;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -462,8 +460,8 @@
     display: inline-grid;
     height: 5vh;
     width: 20vh;
-    margin-top: 1vh;
     cursor: pointer;
+    margin-top: 10px;
     transition: 0.3s ease-in-out;
 }
 
@@ -473,44 +471,7 @@
 }
 
 .tutor-finder-Details {
-    padding: 10vh;
-    line-height: 3vh;
-}
-.messages {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.messages li {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.messages .success {
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-}
-
-.messages .error {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-}
-
-.messages .warning {
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-}
-
-.messages .info {
-    color: #31708f;
-    background-color: #d9edf7;
-    border-color: #bce8f1;
+    margin: auto;
 }
 
 /*Choose a Tutor page*/
