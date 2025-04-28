@@ -2,11 +2,13 @@
 {% block content %}
 
 
-<div id="form-container">
-    <div class="login-container">
+
+     <div class="login-container">
+        <article class="edit-profile-container">
 <h1>Edit Your Classes</h1>
 
 <h2>Current Classes:</h2>
+<article class="edit-profile-container">
 <ul>
     {% for cls in user_classes %}
         <li>{{ cls.name }}</li>
@@ -31,6 +33,7 @@
     <button type="submit">Update Classes</button>
 </form>
 </div>
-</div>
+</article>
+</article>
 
 {% endblock %}
