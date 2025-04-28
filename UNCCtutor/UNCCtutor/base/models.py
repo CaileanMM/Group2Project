@@ -20,6 +20,7 @@ class User(AbstractUser):
 class TutorCard(models.Model):
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200)
+    rating = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -31,4 +32,14 @@ class Classes(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Review(models.Model):
+    tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_reviews')
+    rating = models.IntegerField()
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.student.username} had this to say about {self.tutor.username}'
 
