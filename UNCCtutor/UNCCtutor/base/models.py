@@ -34,10 +34,10 @@ class Classes(models.Model):
         return self.name
     
 class Review(models.Model):
-    tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
-    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_reviews')
-    rating = models.IntegerField()
-    comment = models.TextField()
+    tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tutor_Username')
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_Username')
+    rating = models.IntegerField(default=0)
+    comment = models.TextField(max_length=200, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

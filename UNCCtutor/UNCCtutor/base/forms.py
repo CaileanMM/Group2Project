@@ -18,3 +18,14 @@ class UserProfileForm(ModelForm):
             'skills': forms.Textarea(attrs={'rows': 2}),
             'currentYear': forms.TextInput(attrs={'placeholder': 'e.g. Sophomore'}),
         }
+
+class SelectTutorForm(forms.Form):
+    user = forms.ModelChoiceField(queryset=User.objects.none())
+
+    def __init__(self, *args, **kwargs):
+        tutor = kwargs.pop('tutor', False)
+        super().__init__(*args, **kwargs)
+        if tutor:
+            self.fields['user'].queryset = User.objects.filter(tutor=True)
+        else:
+            self.fields['user'].queryset = User.objects.filter(tutor=False)

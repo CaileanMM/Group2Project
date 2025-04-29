@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<body id="rating-background">
+    <div class="rating-container">
+        <div id="rating-header">
+            <h1>Rate Your Tutor</h1>
+        </div>
+        <div id="rating-form">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="select tutor">
+                    
+                </div>
+                <div class="rate-comment">
+
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+
+{% endblock %}
