@@ -175,7 +175,7 @@
 
 #rating-number{
     font-weight: bold;
-    font-size: 28px;
+    font-size: 18px;
 }
 
 .user-classes-title{
@@ -231,8 +231,9 @@
     background: #005035;
     align-items: center;
     flex-direction: column;
+    height: auto;
     width: 400px;
-    height: 400px;
+    min-height: 400px;
     font: 20px "Roboto", sans-serif;
     color: white;
     border-radius: 20px;
@@ -639,7 +640,7 @@
 }
 
 .landing_flex{
-    display: flexbox;
+    display: flex;
     padding: 20px;
     max-width: 300px;
 }
