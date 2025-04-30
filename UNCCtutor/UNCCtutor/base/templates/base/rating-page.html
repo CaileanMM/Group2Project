@@ -4,12 +4,13 @@
 
 <article class="rating-container">
     <h1>Rate Your Tutor</h1>
-    <form method="post">
+    <form method="post" class="form" enctype="multipart/form-data">
         {% csrf_token %}
-        <body class="rate-tutor-form">
+        <body>>
             {% for field in form %}
             <div class="form__group__edit" class="field-container">
-            
+                <label class="login-label">{{ field.label }}</label>
+                {{ field }}
             </div>
             {% endfor %}
         </body>

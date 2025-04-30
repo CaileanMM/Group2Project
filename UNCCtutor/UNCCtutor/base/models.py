@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import AbstractUser
 
 # Custom user model
@@ -36,10 +37,13 @@ class Classes(models.Model):
 class Review(models.Model):
     tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tutor_Username')
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_Username')
-    rating = models.IntegerField(default=0)
+    rating = models.IntegerField(default=1, validators=[
+        MinValueValidator(1),
+        MaxValueValidator(5)
+    ])
     comment = models.TextField(max_length=200, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.student.username} had this to say about {self.tutor.username}'
+        return self.name
 
