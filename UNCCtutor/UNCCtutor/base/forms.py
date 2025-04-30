@@ -21,12 +21,6 @@ class UserProfileForm(ModelForm):
         }
 
 class ReviewForm(ModelForm):
-    
     class Meta:
         model = Review
         fields = ['tutor', 'rating', 'comment']
-        widgits = {
-        'tutor': forms.ModelChoiceField(queryset=User.objects.filter(tutor=True), empty_label="Select a tutor"),
-        'rating': forms.IntegerField(min_value=1, max_value=5),
-        'comment': forms.Textarea(attrs={'rows': 3} | {'placeholder': 'Write your review here...'}),
-        }

@@ -35,13 +35,12 @@ class Classes(models.Model):
         return self.name
     
 class Review(models.Model):
-    tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tutor_Username')
-    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_Username')
+    tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Tutors', limit_choices_to={'tutor': True})
     rating = models.IntegerField(default=1, validators=[
         MinValueValidator(1),
         MaxValueValidator(5)
     ])
-    comment = models.TextField(max_length=200, null=True, blank=True)
+    comment = models.TextField(max_length=200, null=True, blank=True, default="Add a comment!")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

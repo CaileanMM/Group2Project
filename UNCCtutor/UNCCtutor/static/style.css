@@ -766,11 +766,17 @@
     background: #005035;
     align-items: center;
     flex-direction: column;
-    width: 200px;
-    height: 200px;
+    width: fit-content;
+    height: fit-content;
     font: 20px "Roboto", sans-serif;
     color: white;
     border-radius: 20px;
     border: 3px;
+    justify-self: center;
 }
 
+.rating-container{
+    background-image: url("../static/images/AtkinsLibrary.jpg");
+    background-repeat: no-repeat;
+    size-adjust: cover;
+}
