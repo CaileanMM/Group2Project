@@ -28,13 +28,22 @@ class TutorCard(models.Model):
         return self.name
 
 
-# Classes model
+# Classes Model
 class Classes(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
     
+#Support Model
+class Support(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    email = models.EmailField()
+    message = models.TextField()
+    time_submit = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return f"Message from {self.email} at {self.time_submit}"
+
 class Review(models.Model):
     tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Tutors', limit_choices_to={'tutor': True})
     rating = models.IntegerField(default=1, validators=[

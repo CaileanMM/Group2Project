@@ -6,8 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .models import User, Classes, Review
-from .forms import MyUserCreationForm, ReviewForm, UserProfileForm
-
+from .forms import MyUserCreationForm, ReviewForm, UserProfileForm, SupportForm
 
 # Create your views here.
 def home(request):
@@ -129,7 +128,18 @@ def zoomPage(request):
     return render(request, 'base/zoom-page.html', context)
 
 def support(request):
-    context = {}
+    if request.method == "POST":
+        form = SupportForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit=False)
+            if request.user.is_authenticated:
+                 message.user = request.user
+            message.save()
+            return redirect('home')
+    else:
+        form = SupportForm()        
+
+    context = {'form' : form}
     return render(request, 'base/support.html', context)
 
 def tutorProfile(request):

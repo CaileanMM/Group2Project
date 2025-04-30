@@ -4,6 +4,7 @@ from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from .models import User
 from .models import Review
+from .models import Support
 
 class MyUserCreationForm(UserCreationForm):
     class Meta:
@@ -24,3 +25,9 @@ class ReviewForm(ModelForm):
     class Meta:
         model = Review
         fields = ['tutor', 'rating', 'comment']
+
+#Support form class
+class SupportForm(forms.ModelForm):
+    class Meta:
+        model = Support
+        fields = ['email','message']
