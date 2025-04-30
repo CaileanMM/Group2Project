@@ -776,7 +776,9 @@
 }
 
 .rating-container{
-    background-image: url("../static/images/AtkinsLibrary.jpg");
+    background-image: url(../static/images/AtkinsLibrary.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    size-adjust: cover;
+    color: rgb(255, 255, 255);
+    font-family: "Roboto", sans-serif;
 }
