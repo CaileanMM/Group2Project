@@ -24,7 +24,11 @@
             <div class="info-container" id="ratings">
                 <div class="user-classes-title">Ratings</div>
                 {% for review in reviews %}
-                    <div class="user-classes">{{ review.comment }}</div>
+
+                    <div class="user-classes-rating">
+                        <div id="rating-number">{{ review.rating }}:</div>
+                        <div id="rating-comment">{{ review.comment }}</div>
+                    </div>
                 {% endfor %}
             </div>
         {% endif %}

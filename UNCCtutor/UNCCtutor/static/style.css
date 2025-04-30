@@ -164,6 +164,26 @@
     border-top: 5px solid white;
 }
 
+.user-classes-rating{
+    padding-left: 10px;
+    padding-top: 15px;
+    border-top: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#rating-number{
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#rating-comment{
+    padding-bottom: 15px;
+}
+
 .user-classes-title{
     font-weight: bold;
     font-size: 35px;
@@ -180,7 +200,6 @@
     display: flex;
     flex-direction: column;
     justify-content: normal;
-
 }
 
 .info-text{
