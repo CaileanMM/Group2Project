@@ -173,6 +173,16 @@
     margin-bottom: 20px;
 }
 
+.info-container#ratings{
+    width: 650px;
+    height: auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+
+}
+
 .info-text{
     margin-top: 10px;
     text-align: center;

@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .models import User, Classes
+from .models import User, Classes, Review
 from .forms import MyUserCreationForm, ReviewForm, UserProfileForm
 
 
@@ -58,8 +58,16 @@ def registerPage(request):
 def userProfile(request, pk):
 
     user = User.objects.get(id=pk)
+    reviews = Review.objects.filter(tutor=user)
 
-    context = {'user': user, 'bio': user.bio, 'userClasses': user.classes.all(),'skills':user.skills, 'currentYear':user.currentYear}
+    avg_rating = 0
+
+    if len(reviews) > 0:
+        for review in reviews:
+            avg_rating += review.rating
+        avg_rating /= len(reviews)
+
+    context = {'user': user, 'bio': user.bio, 'userClasses': user.classes.all(),'skills':user.skills, 'currentYear':user.currentYear, 'avg_rating':avg_rating, 'reviews':reviews}
     return render(request, 'base/profile.html', context)
 
 def logoutUser(request):
