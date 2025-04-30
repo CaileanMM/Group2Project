@@ -117,10 +117,8 @@
     border: 2px white;
     background: #005035;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-
-    /*Potential styling*/
+    flex-flow: column wrap;
     border-radius: 20px;
     border: 2px solid black;
 }
@@ -137,7 +135,8 @@
     padding-top: 10px;
     padding-bottom: 20px;
     display: flex;
-    flex-wrap: wrap
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .info-container#bio{
@@ -147,7 +146,7 @@
     max-height: 400px;
     padding: 10px 30px 30px 30px;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .info-container#classes{
@@ -175,13 +174,8 @@
 }
 
 #rating-number{
-    padding-bottom: 10px;
     font-weight: bold;
     font-size: 28px;
-}
-
-#rating-comment{
-    padding-bottom: 15px;
 }
 
 .user-classes-title{
