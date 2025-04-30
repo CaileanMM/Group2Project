@@ -1,3 +1,4 @@
+from typing import Self
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
@@ -18,3 +19,8 @@ class UserProfileForm(ModelForm):
             'skills': forms.Textarea(attrs={'rows': 2}),
             'currentYear': forms.TextInput(attrs={'placeholder': 'e.g. Sophomore'}),
         }
+
+class ReviewForm(ModelForm):
+    class Meta:
+        model = Review
+        fields = ['tutor', 'rating', 'comment']
