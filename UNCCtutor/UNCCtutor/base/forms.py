@@ -22,17 +22,16 @@ class UserProfileForm(ModelForm):
 
 class ReviewForm(forms.Form):
     
-    def __init__(self, *args, **kwargs):
-        self.request = kwargs.pop('request')
-        super(ReviewForm, self).__init__(*args, **kwargs)
-        self.fields['student'].initial = User.objects.get(user=self.request.user)
-    
     class Meta:
         model = Review
         fields = ['tutor', 'student', 'rating', 'comment']
         widgits = {
         'tutor': forms.ModelChoiceField(queryset=User.objects.filter(tutor=True), empty_label="Select a tutor"),
         'rating': forms.IntegerField(min_value=1, max_value=5),
-        'comment': forms.Textarea(attrs={'rows': 3} | {'placeholder': 'Write your review here...'}, max_length=200, required=False),
+        'comment': forms.Textarea(attrs={'rows': 3} | {'placeholder': 'Write your review here...'}),
         'student': forms.HiddenInput(),
         }
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request')
+        super(ReviewForm, self).__init__(*args, **kwargs)
+        self.fields['student'].initial = User.objects.get(user=self.request.user)
