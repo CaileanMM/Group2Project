@@ -7,7 +7,7 @@
         <div class="info-container" id="username-container">
             <div class="info-text" id="info-username">{{ user.username }}</div>
             {% if user.tutor %}
-                <div class="info-text-subheader">Tutor</div>
+                <div class="info-text-subheader">Tutor {{ avg_rating }}</div>
             {% else %}
                 <div class="info-text-subheader">{{currentYear}}</div>
             {% endif %}
@@ -20,6 +20,18 @@
             <div class="info-text-header">Bio:</div>
             <div class="info-text">{{ bio }}</div> 
         </div>
+        {% if reviews|length > 0 %}
+            <div class="info-container" id="ratings">
+                <div class="user-classes-title">Ratings</div>
+                {% for review in reviews %}
+
+                    <div class="user-classes-rating">
+                        <div id="rating-number">{{ review.rating }}:</div>
+                        <div id="rating-comment">{{ review.comment }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
         <div class="edit-button-container">
             {% if request.user.id == user.id %}
                 <a href="{% url 'edit-profile' user.id %}" class="edit-button">Edit</a>
