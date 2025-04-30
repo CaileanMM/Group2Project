@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .models import User, Classes
-from .forms import MyUserCreationForm, UserProfileForm
+from .forms import MyUserCreationForm, ReviewForm, UserProfileForm
 
 
 # Create your views here.
@@ -139,3 +139,20 @@ def support(request):
 def tutorProfile(request):
     context = {}
     return render(request, 'base/tutor-profile.html', context)
+
+@login_required(login_url='login')
+def rateTutor(request):
+    user = request.user
+    form = ReviewForm(request.POST)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your review has been submitted!')
+            return redirect('home')
+        else:
+            messages.error(request, 'An error occurred while submitting your review.')
+    else:
+        form = ReviewForm()
+    context = {'user': user, 'form': form}
+    return render(request, 'base/rating-page.html', context)

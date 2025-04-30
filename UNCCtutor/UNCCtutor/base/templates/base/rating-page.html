@@ -2,25 +2,23 @@
 
 {% block content %}
 
-<body id="rating-background">
-    <div class="rating-container">
-        <div id="rating-header">
-            <h1>Rate Your Tutor</h1>
-        </div>
-        <div id="rating-form">
-            <form method="POST">
-                {% csrf_token %}
-                <div class="select tutor">
-                    
-                </div>
-                <div class="rate-comment">
+<article class="rating-container">
+    <h1>Rate Your Tutor</h1>
+    <form method="post">
+        {% csrf_token %}
+        <body class="rate-tutor-form">
+            {% for field in form %}
+            <div class="form__group__edit" class="field-container">
+            
+            </div>
+            {% endfor %}
+        </body>
 
-                </div>
-            </form>
+        <div class="form__action" id="rating-buttons-container">
+            <button class="rating-button" id="rating-submit" class="btn btn--main" type="submit">Submit</button>
+            <button class="rating-button" id="rating-cancel" href="{% url 'home' %}">Cancel</button>
         </div>
-    </div>
-    
-</body>
+    </form>
 
 
 {% endblock %}

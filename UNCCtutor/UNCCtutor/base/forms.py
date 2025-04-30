@@ -1,3 +1,4 @@
+from typing import Self
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
@@ -19,13 +20,19 @@ class UserProfileForm(ModelForm):
             'currentYear': forms.TextInput(attrs={'placeholder': 'e.g. Sophomore'}),
         }
 
-class SelectTutorForm(forms.Form):
-    user = forms.ModelChoiceField(queryset=User.objects.none())
-
+class ReviewForm(forms.Form):
+    
     def __init__(self, *args, **kwargs):
-        tutor = kwargs.pop('tutor', False)
-        super().__init__(*args, **kwargs)
-        if tutor:
-            self.fields['user'].queryset = User.objects.filter(tutor=True)
-        else:
-            self.fields['user'].queryset = User.objects.filter(tutor=False)
+        self.request = kwargs.pop('request')
+        super(ReviewForm, self).__init__(*args, **kwargs)
+        self.fields['student'].initial = User.objects.get(user=self.request.user)
+    
+    class Meta:
+        model = Review
+        fields = ['tutor', 'student', 'rating', 'comment']
+        widgits = {
+        'tutor': forms.ModelChoiceField(queryset=User.objects.filter(tutor=True), empty_label="Select a tutor"),
+        'rating': forms.IntegerField(min_value=1, max_value=5),
+        'comment': forms.Textarea(attrs={'rows': 3} | {'placeholder': 'Write your review here...'}, max_length=200, required=False),
+        'student': forms.HiddenInput(),
+        }
