@@ -11,6 +11,7 @@ class User(AbstractUser):
     skills = models.TextField(null=True,blank=True, default="I'm still setting up my profile!")
     currentYear = models.CharField(max_length=50, null=True, blank=True, default="I'm still setting up my profile!")
     tutor = models.BooleanField(default=False)
+    rating = models.FloatField(default=0.00)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

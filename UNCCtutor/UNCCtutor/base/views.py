@@ -148,8 +148,15 @@ def rateTutor(request):
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
-            form.save()
+            review = form.save(commit=False)
+            review.save()
+            tutor_reviewed = review.tutor
             messages.success(request, 'Your review has been submitted!')
+            for review in Review.objects.filter(tutor=tutor_reviewed):
+                tutor_reviewed.rating += review.rating
+            tutor_reviewed.rating /= len(Review.objects.filter(tutor=tutor_reviewed))
+            tutor_reviewed.rating = round(tutor_reviewed.rating, 2)
+            tutor_reviewed.save()
             return redirect('home')
         else:
             messages.error(request, 'An error occurred while submitting your review.')
