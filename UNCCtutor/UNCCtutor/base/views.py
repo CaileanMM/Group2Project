@@ -60,12 +60,7 @@ def userProfile(request, pk):
     user = User.objects.get(id=pk)
     reviews = Review.objects.filter(tutor=user)
 
-    avg_rating = 0
-
-    if len(reviews) > 0:
-        for review in reviews:
-            avg_rating += review.rating
-        avg_rating /= len(reviews)
+    avg_rating = user.rating
 
     context = {'user': user, 'bio': user.bio, 'userClasses': user.classes.all(),'skills':user.skills, 'currentYear':user.currentYear, 'avg_rating':avg_rating, 'reviews':reviews}
     return render(request, 'base/profile.html', context)
@@ -152,6 +147,7 @@ def rateTutor(request):
             review.save()
             tutor_reviewed = review.tutor
             messages.success(request, 'Your review has been submitted!')
+            tutor_reviewed.rating = 0
             for review in Review.objects.filter(tutor=tutor_reviewed):
                 tutor_reviewed.rating += review.rating
             tutor_reviewed.rating /= len(Review.objects.filter(tutor=tutor_reviewed))

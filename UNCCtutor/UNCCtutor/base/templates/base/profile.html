@@ -7,7 +7,7 @@
         <div class="info-container" id="username-container">
             <div class="info-text" id="info-username">{{ user.username }}</div>
             {% if user.tutor %}
-                <div class="info-text-subheader">Tutor {{ avg_rating }}</div>
+                <div class="info-text-subheader">Tutor {{ avg_rating }}/5.0</div>
             {% else %}
                 <div class="info-text-subheader">{{currentYear}}</div>
             {% endif %}
@@ -26,7 +26,7 @@
                 {% for review in reviews %}
 
                     <div class="user-classes-rating">
-                        <div id="rating-number">{{ review.rating }}:</div>
+                        <div id="rating-number">{{ review.rating }}/5.0:</div>
                         <div id="rating-comment">{{ review.comment }}</div>
                     </div>
                 {% endfor %}
