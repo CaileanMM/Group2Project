@@ -37,6 +37,6 @@ urlpatterns = [
     path('zoom-page/', views.zoomPage, name='zoom-page'),
     path('support/', views.support, name='support'),
     path('tutor-profile/', views.tutorProfile, name='tutor-profile'),
-    path('rating-page/', views.rateTutor, name='rate-tutor'),
+    path('rating-page/', views.rateTutor, name='rating-page'),
 ]
 
