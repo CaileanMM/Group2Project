@@ -218,6 +218,14 @@
     letter-spacing: 1px;
 }
 
+#username{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 150px;
+    width: 300px;
+}
+
 /*Edit Profile Page*/
 .edit-profile-container{
     margin-top: 20px;
@@ -1149,12 +1157,13 @@
 /*Rating page*/
 .rate-tutor-form {
     margin-top: 20px;
+    padding-top: 15px;
     display: flex;
     background: #005035;
     align-items: center;
     flex-direction: column;
-    width: fit-content;
-    height: fit-content;
+    width: 400px;
+    height: 350px;
     font: 20px "Roboto", sans-serif;
     color: white;
     border-radius: 20px;
