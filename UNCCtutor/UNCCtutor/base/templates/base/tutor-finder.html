@@ -8,13 +8,23 @@
     <div class="tutor-finder-Body">
 
         <div class = "tutor-finder-Feature">
-            <h2>Select a Course</h2>
 
-            <textarea id="" placeholder="Describe what you need..."></textarea>
-            <div class = "tutor-finder-Button">
-                <a href = "https://charlotte-edu.zoom.us/my/dnorma18" onclick="zoomAlert()" type="submit"><input type="submit" value="Instant Mode" /></a>
-                <a href = "{% url 'choose-a-tutor' %}" type="submit"><input type="submit" value="Choose a Tutor" /></a>
-            </div>
+            <form method="GET" action="{% url 'choose-a-tutor' %}">
+
+
+                <h2>Select a Course</h2>
+
+                <div class = "tutor-finder-Feature-TextArea">
+                    <textarea type="text" name="q" placeholder="Please type your course here..." required></textarea>
+                </div>
+
+                <div class = "tutor-finder-Feature-Button">
+                    <button formaction = "https://charlotte-edu.zoom.us/my/dnorma18"">Instant Mode</button>
+                    <button type="Submit">Choose a Tutor</button>
+                </div>
+
+            </form>
+                
 
         </div>
 
@@ -23,7 +33,5 @@
         </div>
 
     </div>
-    
 </body>
-<script src = "../static/js/script.js"></script>
 {% endblock %}

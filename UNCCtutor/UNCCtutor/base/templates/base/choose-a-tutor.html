@@ -7,31 +7,37 @@
 
     <div class="choose-a-tutor-Body">
 
-        {% for tutor in tutors %}
-        <div class = "choose-a-tutor-Profile">
-            <div class="tutor-card-left">
-                <div class = "choose-a-tutor-Profile-Image"><img src = "../static/images/profile-pic-placeholder.png"/></div>
+        {% if tutors %}
+            {% for tutor in tutors %}
+            <div class = "choose-a-tutor-Profile">
+                <div class="tutor-card-left">
+                    <div class = "choose-a-tutor-Profile-Image"><img src = "../static/images/profile-pic-placeholder.png"/></div>
 
-                <div class = "choose-a-tutor-Profile-Info">
-                    <div class = "choose-a-tutor-Profile-Name">Name: {{tutor.username}}</div>
+                    <div class = "choose-a-tutor-Profile-Info">
+                        <div class = "choose-a-tutor-Profile-Name">Name: {{tutor.username}}</div>
 
-                    <div class = "choose-a-tutor-Profile-Rating">Rating: N/A</div>
+                        <div class = "choose-a-tutor-Profile-Rating">Rating: N/A</div>
 
-                    <div class = "choose-a-tutor-Profile-Major">Skills: {{tutor.skills|default:"Not Specified"}}</div>
+                        <div class = "choose-a-tutor-Profile-Major">Skills: {{tutor.skills|default:"Not Specified"}}</div>
+                    </div>
+                </div>
+
+                <div class="tutor-card-right">
+                    <div class = "choose-a-tutor-Profile-Button">
+                        <a href = "{% url 'user-profile' tutor.id%}" type="submit"><input type="submit" value="View Profile" /></a>
+                        <a href = "{% url 'zoom-page' %}" type="submit"><input type="submit" value="Connect" /></a>
+                    </div>
                 </div>
             </div>
-
-            <div class="tutor-card-right">
-                <div class = "choose-a-tutor-Profile-Button">
-                    <a href = "{% url 'user-profile' tutor.id%}" type="submit"><input type="submit" value="View Profile" /></a>
-                    <a href = "{% url 'zoom-page' %}" type="submit"><input type="submit" value="Connect" /></a>
-                </div>
+            {% endfor %}
+        {% else %}
+            <div class="choose-a-tutor-no-tutors-found">
+                <p>No tutors found matching your search criteria.</p>
+                <p>Please try different keywords or check back later.</p>
             </div>
-        </div>
-        {% endfor %}
-        
+        {% endif %}
+    
     </div>
     
 </body>
-<script src = "../static/js/script.js"></script>
 {% endblock %}

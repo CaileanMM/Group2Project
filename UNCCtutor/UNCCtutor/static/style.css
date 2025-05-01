@@ -6,13 +6,7 @@
 
 .html{margin: 0; padding: 0;}
 
-/*Title Style*/
-.title-style{
-    color: white; 
-    font-size: 4vw; 
-    margin: 2%; 
-    text-shadow: 2px 2px 5px black;
-}
+
 /*button class*/
 
 .button-class button[type="submit"] {
@@ -413,156 +407,564 @@
     cursor: pointer;
 }
 
+
 /*Tutor Finder Page*/
-.tutor-finder {
-    background-image: url("../static/images/UNCC_Background.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-}
-.tutor-finder-Body {
-    background-color: white;
-    width: 100%;
-    min-height: 50vh;
-    padding: 20px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    box-shadow: 0px 10px 15px black;
-
-}
-.tutor-finder-Feature {
-    margin: auto;
+.title-style{
+    color: white; 
+    font-size: 60px; 
+    margin: 2%; 
+    text-shadow: 2px 2px 5px black;
 }
 
-.tutor-finder-Feature > h2 {
-    margin-bottom: 10px;
-    text-align: center;
+/*Desktop*/
+@media all and (min-width: 1024px) and (max-width: 1728px) { 
+
+    .tutor-finder {
+        background-image: url("../static/images/UNCC_Background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    .tutor-finder-Body {
+        background-color: white;
+        width: 100%;
+        min-height: 50vh;
+        padding: 0px 5% 0px 5%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0px 10px 15px black;
+    
+    }
+    
+    .tutor-finder-Feature {
+        margin: auto;
+    }
+    
+    .tutor-finder-Feature > form > h2 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .tutor-finder-Feature-TextArea > textarea {
+        resize: none;
+        padding: 10px;
+        min-height: 20vh;
+        max-height: 30vh;
+        min-width: 100%;
+        max-width: 40vh;
+        border-radius: 10px;
+    }
+    
+    .tutor-finder-Feature-TextArea > textarea::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    .tutor-finder-Feature-Button > button {
+        font-weight: bold;
+        font-size: 15px;
+        background-color: #008b5e;
+        color: white;
+        border-radius: 10px;
+        border-style: none;
+        display: inline-grid;
+        min-height: 5vh;
+        width: 20vh;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s ease-in-out;
+        text-decoration: none;
+        text-align: center;
+        padding: 1.5vh;
+    }
+    
+    .tutor-finder-Feature-Button > button:hover {
+        background-color: rgb(225, 225, 225);
+        box-shadow: 10px 10px 20px grey;
+        color: #006b47;
+    }
+    
+    .tutor-finder-Details {
+        text-align: justify;
+        text-justify: inter-word;
+        margin: auto;
+        font-size: 0.9375em;
+    }
 }
 
-.tutor-finder-Feature > textarea {
-    resize: none;
-    padding: 10px;
-    height: 20vh;
-    width: 100%;
-    border-radius: 10px;
+/*Tablet*/
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+
+    .tutor-finder {
+        background-image: url("../static/images/UNCC_Background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    .tutor-finder-Body {
+        background-color: white;
+        width: 100%;
+        padding: 0px 5% 0px 5%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0px 10px 15px black;
+    
+    }
+    
+    .tutor-finder-Feature {
+        margin: auto;
+    }
+    
+    .tutor-finder-Feature > form > h2 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .tutor-finder-Feature-TextArea > textarea {
+        resize: none;
+        padding: 10px;
+        min-height: 20vh;
+        max-height: 30vh;
+        min-width: 100%;
+        max-width: 40vh;
+        border-radius: 10px;
+    }
+    
+    .tutor-finder-Feature-TextArea > textarea::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    .tutor-finder-Feature-Button > button {
+        font-weight: bold;
+        font-size: 0.9375em;
+        background-color: #008b5e;
+        color: white;
+        border-radius: 10px;
+        border-style: none;
+        display: inline-grid;
+        min-height: 5vh;
+        min-width: 20vh;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s ease-in-out;
+        text-decoration: none;
+        text-align: center;
+        padding: 1.5vh;
+    }
+    
+    .tutor-finder-Feature-Button > button:hover {
+        background-color: rgb(225, 225, 225);
+        box-shadow: 10px 10px 20px grey;
+        color: #006b47;
+    }
+    
+    .tutor-finder-Details {
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 5vh;
+        font-size: 0.9375em;
+    }
+
 }
 
-.tutor-finder-Button > a > input {
-    font-weight: bold;
-    font-size: 15px;
-    background-color: #008b5e;
-    color: white;
-    border-radius: 10px;
-    border-style: none;
-    display: inline-grid;
-    height: 5vh;
-    width: 20vh;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s ease-in-out;
-}
+/*Phone*/
+@media all and (min-width: 480px) and (max-width: 768px) {
 
-.tutor-finder-Button > a > input:hover {
-    background-color: rgb(225, 225, 225);
-    color: #006b47;
-}
+    .tutor-finder {
+        background-image: url("../static/images/UNCC_Background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    .tutor-finder-Body {
+        background-color: white;
+        width: 100%;
+        min-height: 50vh;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        box-shadow: 0px 10px 15px black;
+    
+    }
+    
+    .tutor-finder-Feature {
+        margin: auto;
+        margin-top: 5vh;
+    }
+    
+    .tutor-finder-Feature > form > h2 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .tutor-finder-Feature-TextArea > textarea {
+        resize: none;
+        padding: 10px;
+        min-height: 20vh;
+        max-height: 30vh;
+        min-width: 100%;
+        max-width: 40vh;
+        border-radius: 10px;
+    }
+    
+    .tutor-finder-Feature-TextArea > textarea::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    .tutor-finder-Feature-Button > button {
+        font-weight: bold;
+        font-size: 0.9375em;
+        background-color: #008b5e;
+        color: white;
+        border-radius: 10px;
+        border-style: none;
+        display: inline-grid;
+        min-height: 5vh;
+        min-width: 20vh;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s ease-in-out;
+        text-decoration: none;
+        text-align: center;
+        padding: 1.5vh;
+    }
+    
+    .tutor-finder-Feature-Button > button:hover {
+        background-color: rgb(225, 225, 225);
+        box-shadow: 10px 10px 20px grey;
+        color: #006b47;
+    }
+    
+    .tutor-finder-Details {
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 5vh;
+        font-size: 0.9375em;
+    }
 
-.tutor-finder-Details {
-    margin: auto;
-}
+ }
+
 
 /*Choose a Tutor page*/
-.choose-a-tutor {
-    background-image: url("../static/images/UNCC_Background.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-}
-.choose-a-tutor-Body {
-    background-color: white;
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-shadow: 0px 10px 15px black;
-}
-
-.choose-a-tutor-Profile {
-    display: flex;
-    color: white;
-    align-items: center;
-    background-color: #005035;
-    width: 40vh;
-    height: 30vh;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-.tutor-card-left{
+/*Desktop*/
+.choose-a-tutor-no-tutors-found {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.choose-a-tutor-Profile:hover {
-    background-color: #006243;
-    box-shadow: 10px 10px 20px grey;
-}   
-
-.choose-a-tutor-Profile-Image {
-    padding: 10%;
-}
-
-.choose-a-tutor-Profile-Info {
-    padding: 1vh;
-}
-
-.choose-a-tutor-Profile-Major{
-    width: 180px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.choose-a-tutor-Profile-Button {
-    width: 40px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.choose-a-tutor-Profile-Button > a > input {
-    font-weight: bold;
-    font-size: 15px;
-    background-color: white;
-    color: #006b47;
+    text-align: center;
+    height: 200px;
+    box-shadow: 2px 2px 5px black;
     border-radius: 10px;
-    border-style: none;
-    height: 5vh;
-    width: 10vh;
-    margin-top: 1vh;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+    padding: 20px;
+
 }
 
-.choose-a-tutor-Profile-Button > a > input:hover {
-    background-color: #008b5e;
-    color: white;
+@media all and (min-width: 1024px) and (max-width: 1728px) { 
+
+    .choose-a-tutor {
+        background-image: url("../static/images/UNCC_Background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    .choose-a-tutor-Body {
+        background-color: white;
+        width: 100%;
+        height: auto;
+        padding: 10vh 5px 10vh 5px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-shadow: 0px 10px 15px black;
+    }
+    
+    .choose-a-tutor-Profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        color: white;
+        background-color: #005035;
+        width: 40vh;
+        height: 30vh;
+        min-width: 350px;
+        min-height: 250px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .tutor-card-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    .choose-a-tutor-Profile:hover {
+        background-color: #006243;
+        box-shadow: 10px 10px 20px grey;
+    }   
+    
+    .choose-a-tutor-Profile-Image {
+        padding: 10%;
+    }
+    
+    .choose-a-tutor-Profile-Info {
+        padding: 1vh;
+    }
+    
+    .choose-a-tutor-Profile-Major{
+        width: 180px;
+    }
+    
+    .choose-a-tutor-Profile-Button {
+        min-width: 200px;
+        padding: 10px 20px;
+    }
+
+    .choose-a-tutor-Profile-Button > a {
+        text-decoration: none;
+    }
+    
+    .choose-a-tutor-Profile-Button > a > input {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        font-weight: bold;
+        background-color: white;
+        color: #006b47;
+        border-radius: 10px;
+        border-style: none;
+        height: 5vh;
+        width: 10vh;
+        min-height: 50px;
+        min-width: 100px;
+        margin-top: 1vh;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .choose-a-tutor-Profile-Button > a > input:hover {
+        background-color: #008b5e;
+        color: white;
+    }
 }
+
+/*Tablet*/
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+
+    .choose-a-tutor {
+        background-image: url("../static/images/UNCC_Background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    .choose-a-tutor-Body {
+        background-color: white;
+        width: 100%;
+        height: auto;
+        padding: 10vh 5px 10vh 5px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-shadow: 0px 10px 15px black;
+    }
+    
+    .choose-a-tutor-Profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        color: white;
+        background-color: #005035;
+        width: 40vh;
+        height: 30vh;
+        min-width: 350px;
+        min-height: 250px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .tutor-card-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    .choose-a-tutor-Profile:hover {
+        background-color: #006243;
+        box-shadow: 10px 10px 20px grey;
+    }   
+    
+    .choose-a-tutor-Profile-Image {
+        padding: 10%;
+    }
+    
+    .choose-a-tutor-Profile-Info {
+        padding: 1vh;
+    }
+    
+    .choose-a-tutor-Profile-Major{
+        width: 180px;
+    }
+    
+    .choose-a-tutor-Profile-Button {
+        min-width: 200px;
+        padding: 10px 20px;
+    }
+
+    .choose-a-tutor-Profile-Button > a {
+        text-decoration: none;
+    }
+    
+    .choose-a-tutor-Profile-Button > a > input {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        font-weight: bold;
+        background-color: white;
+        color: #006b47;
+        border-radius: 10px;
+        border-style: none;
+        height: 5vh;
+        width: 10vh;
+        min-height: 50px;
+        min-width: 100px;
+        margin-top: 1vh;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .choose-a-tutor-Profile-Button > a > input:hover {
+        background-color: #008b5e;
+        color: white;
+    }
+
+}
+
+/*Phone*/
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    .choose-a-tutor {
+        background-image: url("../static/images/UNCC_Background.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+    .choose-a-tutor-Body {
+        background-color: white;
+        width: 100%;
+        height: auto;
+        padding: 10vh 5px 10vh 5px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-shadow: 0px 10px 15px black;
+    }
+    
+    .choose-a-tutor-Profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        color: white;
+        background-color: #005035;
+        width: 40vh;
+        height: 30vh;
+        min-width: 350px;
+        min-height: 250px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .tutor-card-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    .choose-a-tutor-Profile:hover {
+        background-color: #006243;
+        box-shadow: 10px 10px 20px grey;
+    }   
+    
+    .choose-a-tutor-Profile-Image {
+        padding: 10%;
+    }
+    
+    .choose-a-tutor-Profile-Info {
+        padding: 1vh;
+    }
+    
+    .choose-a-tutor-Profile-Major{
+        width: 180px;
+    }
+    
+    .choose-a-tutor-Profile-Button {
+        min-width: 200px;
+        padding: 10px 20px;
+    }
+
+    .choose-a-tutor-Profile-Button > a {
+        text-decoration: none;
+    }
+    
+    .choose-a-tutor-Profile-Button > a > input {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        font-weight: bold;
+        background-color: white;
+        color: #006b47;
+        border-radius: 10px;
+        border-style: none;
+        height: 5vh;
+        width: 10vh;
+        min-height: 50px;
+        min-width: 100px;
+        margin-top: 1vh;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .choose-a-tutor-Profile-Button > a > input:hover {
+        background-color: #008b5e;
+        color: white;
+    }
+
+ }
+
 
 /*Zoom page*/
 .zoom-page {
