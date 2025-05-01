@@ -410,28 +410,39 @@
     align-items: center;
 }
 
+/*#error-container{*/
+/*    background: #ff4f4f;*/
+/*    width: 350px;*/
+/*    height: 50px;*/
+/*    margin-top: 10px;*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*    align-items: center;*/
+/*    border-radius: 7px;*/
+/*    border: 2px #9b3434 solid;*/
+/*}*/
+
 #error-container{
-    background: #ff4f4f;
+    background: #ffb9b9;
     width: 350px;
     height: 50px;
     margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 7px;
-    border: 2px #9b3434 solid;
+    border-left: 2px #ff3f3f solid;
 }
 
 #error-message{
     text-align: center;
-    color: white;
+    color: black;
     font: 18px "Roboto", sans-serif;
 }
 
 #error-exit-button{
     background: rgba(255, 255, 255, 0);
     border: none;
-    color: white;
+    color: #ff3f3f;
     font-size: 30px;
 }
 
