@@ -442,7 +442,7 @@
 #error-exit-button{
     background: rgba(255, 255, 255, 0);
     border: none;
-    color: #ff3f3f;
+    color: white;
     font-size: 30px;
 }
 
