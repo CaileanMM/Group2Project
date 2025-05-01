@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
-from django.contrib import messages
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
@@ -110,16 +109,44 @@ def editClasses(request):
         'all_classes': all_classes,  # Get all available classes
     })
 
+def extract_keywords(text):
+    if not text:
+        return[]
+    
+    words = text.lower().split()
+    return [
+        word.strip(".,?!")
+        for word in words
+        if len(word) >= 3
+    ]
+
+def get_tutors_by_skill(request):
+    query = request.GET.get('q', '').strip()
+    tutors = User.objects.all()
+    
+    if query:
+        query_keywords = extract_keywords(query)
+        if query_keywords:
+            q_objects = Q()
+            for keyword in query_keywords:
+                q_objects |= Q(skills__icontains=keyword)
+            tutors = tutors.filter(q_objects)
+
+    return tutors
 
 def tutorFinder(request):
-    context = {}
+    tutors = get_tutors_by_skill(request)
+    context = {
+        'tutors': tutors,
+    }
     return render(request, 'base/tutor-finder.html', context)
+
     
 @login_required(login_url='login')
 def ChooseATutor(request):
-    tutors = User.objects.filter(tutor=True)
+    tutors = get_tutors_by_skill(request)
     context = {
-        'tutors' : tutors,
+        'tutors': tutors,
     }
     return render(request, 'base/choose-a-tutor.html', context)
 

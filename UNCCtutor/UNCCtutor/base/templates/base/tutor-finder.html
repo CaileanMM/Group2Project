@@ -1,35 +1,37 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
 <body class="tutor-finder">
 
-    <p class = "title-style">Tutor Finder</p>
+    <p class = "title-style"">Tutor Finder</p>
 
     <div class="tutor-finder-Body">
 
         <div class = "tutor-finder-Feature">
-            <h2>Select a Course</h2>
 
-            <textarea id="" placeholder="Describe what you need..."></textarea>
-            <div class = "tutor-finder-Button">
-                <a href = "{% url 'rate-tutor' %}" onclick="window.open('https://charlotte-edu.zoom.us/my/dnorma18', '_blank'); return true;" type="submit"><input type="submit" value="Instant Mode" /></a>
-                <a href = "{% url 'choose-a-tutor' %}" type="submit"><input type="submit" value="Choose a Tutor" /></a>
-            </div>
+            <form method="GET" action="{% url 'choose-a-tutor' %}">
+
+
+                <h2>Select a Course</h2>
+
+                <div class = "tutor-finder-Feature-TextArea">
+                    <textarea type="text" name="q" placeholder="Please type your course here..." required></textarea>
+                </div>
+
+                <div class = "tutor-finder-Feature-Button">
+                    <button formaction = "https://charlotte-edu.zoom.us/my/dnorma18"">Instant Mode</button>
+                    <button type="Submit">Choose a Tutor</button>
+                </div>
+
+            </form>
+                
 
         </div>
 
         <div class = "tutor-finder-Details">
-            <p>Need a tutor now and do not want to search? </p>
-            <p>Click stant Mode!</p>
-            <p>If you want to curate your tutor click choose tutor!</p>
-            <p>We offer 100% satifaction!</p>
-            <p>We are the best!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
         </div>
 
     </div>
-    
 </body>
-
-<script src = "../static/js/script.js"></script>
 {% endblock %}
