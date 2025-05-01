@@ -28,6 +28,7 @@
     height: 100px;
     width: 100%;
     background-color: #005035;
+    border-bottom: 2px groove black;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
