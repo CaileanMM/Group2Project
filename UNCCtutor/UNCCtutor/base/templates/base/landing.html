@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 {% extends 'main.html' %}
 {% block content %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body id="landing_background">
+<body class="support-page-container">
+            <p class = "title-style">UNCC 24/7</p>
+        </body>
+
+    
+        <div class="tutor-finder-Body">
+    
     <main id="landing_main_body">
-        <div class="landing_flex">
-        <h1>UNCC 24/7 Tutoring</h1>
-        <p>
+        
+        <p  style ="color: black;">
             Need help with a Project? 
             Do you have a homework problem that you just don't get? 
             Are the usual options just not available?
@@ -21,11 +21,10 @@
         </p>
         <br>
         <a class="get-started" href="{% url 'tutor-finder' %}"><button>GET STARTED!</button></a>
-        </div>
+        
     </main>
-    <footer id="landing_footer">
-        <a>contact us: UNCCinstantTutor@charlotte.edu</a>
-    </footer>
-</body>
+</div>
+    
+
 </html>
 {% endblock %}

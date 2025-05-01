@@ -111,10 +111,8 @@
     border: 2px white;
     background: #005035;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-
-    /*Potential styling*/
+    flex-flow: column wrap;
     border-radius: 20px;
     border: 2px solid black;
 }
@@ -131,7 +129,8 @@
     padding-top: 10px;
     padding-bottom: 20px;
     display: flex;
-    flex-wrap: wrap
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .info-container#bio{
@@ -141,7 +140,7 @@
     max-height: 400px;
     padding: 10px 30px 30px 30px;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .info-container#classes{
@@ -158,6 +157,21 @@
     border-top: 5px solid white;
 }
 
+.user-classes-rating{
+    padding-left: 10px;
+    padding-top: 15px;
+    border-top: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#rating-number{
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .user-classes-title{
     font-weight: bold;
     font-size: 35px;
@@ -165,6 +179,15 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.info-container#ratings{
+    width: 650px;
+    height: auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
 }
 
 .info-text{
@@ -202,8 +225,9 @@
     background: #005035;
     align-items: center;
     flex-direction: column;
+    height: auto;
     width: 400px;
-    height: 400px;
+    min-height: 400px;
     font: 20px "Roboto", sans-serif;
     color: white;
     border-radius: 20px;
@@ -1018,7 +1042,7 @@
 }
 
 .landing_flex{
-    display: flexbox;
+    display: flex;
     padding: 20px;
     max-width: 300px;
 }
@@ -1120,4 +1144,28 @@
     cursor: pointer;
     margin-top: 15px;
     transition: 0.3s ease-in-out;
+}
+
+/*Rating page*/
+.rate-tutor-form {
+    margin-top: 20px;
+    display: flex;
+    background: #005035;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    font: 20px "Roboto", sans-serif;
+    color: white;
+    border-radius: 20px;
+    border: 3px;
+    justify-self: center;
+}
+
+.rating-container{
+    background-image: url(../static/images/AtkinsLibrary.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    font-family: "Roboto", sans-serif;
 }

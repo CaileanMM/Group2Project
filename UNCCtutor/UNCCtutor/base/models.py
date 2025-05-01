@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import AbstractUser
 
 # Custom user model
@@ -10,6 +11,7 @@ class User(AbstractUser):
     skills = models.TextField(null=True,blank=True, default="I'm still setting up my profile!")
     currentYear = models.CharField(max_length=50, null=True, blank=True, default="I'm still setting up my profile!")
     tutor = models.BooleanField(default=False)
+    rating = models.FloatField(default=0.00)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
@@ -26,20 +28,33 @@ class TutorCard(models.Model):
         return self.name
 
 
-# Classes model
+# Classes Model
 class Classes(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
     
+#Support Model
+class Support(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    email = models.EmailField()
+    message = models.TextField()
+    time_submit = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return f"Message from {self.email} at {self.time_submit}"
+
 class Review(models.Model):
-    tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
-    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_reviews')
-    rating = models.IntegerField()
-    comment = models.TextField()
+    tutor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='Tutors', limit_choices_to={'tutor': True})
+    rating = models.IntegerField(default=1, validators=[
+        MinValueValidator(1),
+        MaxValueValidator(5)
+    ])
+    comment = models.TextField(max_length=200, null=True, blank=True, default="Add a comment!")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.student.username} had this to say about {self.tutor.username}'
+        return f"{self.tutor} Review"
 
+    class Meta:
+        ordering = ["-rating"]

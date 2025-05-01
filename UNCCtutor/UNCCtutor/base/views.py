@@ -4,9 +4,8 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .models import User, Classes
-from .forms import MyUserCreationForm, UserProfileForm
-
+from .models import User, Classes, Review
+from .forms import MyUserCreationForm, ReviewForm, UserProfileForm, SupportForm
 
 # Create your views here.
 def home(request):
@@ -23,13 +22,6 @@ def loginPage(request):
         email = request.POST.get('email').lower()
         password = request.POST.get('password')
 
-        try:
-            user = User.objects.get(email=email)
-        except:
-            messages.error(request, 'incorrect uncc email')
-
-
-        
         user = authenticate(request, email=email, password=password)
 
         if user is not None:
@@ -64,8 +56,11 @@ def registerPage(request):
 def userProfile(request, pk):
 
     user = User.objects.get(id=pk)
+    reviews = Review.objects.filter(tutor=user)
 
-    context = {'user': user, 'bio': user.bio, 'userClasses': user.classes.all(),'skills':user.skills, 'currentYear':user.currentYear}
+    avg_rating = user.rating
+
+    context = {'user': user, 'bio': user.bio, 'userClasses': user.classes.all(),'skills':user.skills, 'currentYear':user.currentYear, 'avg_rating':avg_rating, 'reviews':reviews}
     return render(request, 'base/profile.html', context)
 
 def logoutUser(request):
@@ -160,9 +155,45 @@ def zoomPage(request):
     return render(request, 'base/zoom-page.html', context)
 
 def support(request):
-    context = {}
+    if request.method == "POST":
+        form = SupportForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit=False)
+            if request.user.is_authenticated:
+                 message.user = request.user
+            message.save()
+            return redirect('home')
+    else:
+        form = SupportForm()        
+
+    context = {'form' : form}
     return render(request, 'base/support.html', context)
 
 def tutorProfile(request):
     context = {}
     return render(request, 'base/tutor-profile.html', context)
+
+@login_required(login_url='login')
+def rateTutor(request):
+    user = request.user
+    form = ReviewForm(request.POST)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.save()
+            tutor_reviewed = review.tutor
+            messages.success(request, 'Your review has been submitted!')
+            tutor_reviewed.rating = 0
+            for review in Review.objects.filter(tutor=tutor_reviewed):
+                tutor_reviewed.rating += review.rating
+            tutor_reviewed.rating /= len(Review.objects.filter(tutor=tutor_reviewed))
+            tutor_reviewed.rating = round(tutor_reviewed.rating, 2)
+            tutor_reviewed.save()
+            return redirect('home')
+        else:
+            messages.error(request, 'An error occurred while submitting your review.')
+    else:
+        form = ReviewForm()
+    context = {'user': user, 'form': form}
+    return render(request, 'base/rating-page.html', context)
