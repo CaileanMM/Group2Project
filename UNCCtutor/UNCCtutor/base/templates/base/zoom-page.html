@@ -2,12 +2,19 @@
 
 {% block content %}
 
-
-
 <body class="zoom-page">
     <p style="color: white; font-size: 4vw; margin: 2%; text-shadow: 2px 2px 5px black;">Zoom Page</p>
     <div class="zoom-page-Body">
-        <a type="button" href="https://charlotte-edu.zoom.us/my/dnorma18" target="_blank"><input type="button" value="Connect to Zoom" class="zoom-button" id="clickMe"/></a>
+
+
+        <form method="GET">
+
+            <button formaction="{% url 'rating-page' %}"
+                onclick="window.open('https://charlotte-edu.zoom.us/my/dnorma18', '_blank', 'noopener,noreferrer');
+                return true;"><input type="button" value="Connect to Zoom" class="zoom-button" id="clickMe"/></button>
+
+        </form>
+        
     </div>
 </body>
 

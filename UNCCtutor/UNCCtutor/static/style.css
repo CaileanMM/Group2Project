@@ -1031,7 +1031,18 @@
     place-items: center;
 }
 
-.zoom-page-Body > a > input {
+.zoom-page-Body > form > button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.zoom-page-Body > form > button > input {
     background-image: linear-gradient(180deg, #006b47, #005035);
     font-size: 5vh;
     border-radius: 10000px;
